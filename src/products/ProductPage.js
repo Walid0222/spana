@@ -241,11 +241,11 @@ const ProductPage = () => {
             <div id='firstForm'></div>
 
             <div className="product-content">
-                <h1>{product.name}  {product.name.includes("Spotify premium") && (
+                <h1 style={{fontSize:'22px'}}>{product.name}  {product.name.includes("Spotify premium") && (
                         <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="Spotify Logo" className="spotify-logo" />
                     )}</h1>
                 
-                <h1>+ Garantie 3 Mois</h1>
+                <h1 style={{fontSize:'15px'}}> 🚚 التوصيل مجاني و الدفع عند الإستلام </h1>
                 <p className="price">
                     <span className="new-price">{price}</span>{' '}
                     <span className="old-price">{product.oldPrice}</span>

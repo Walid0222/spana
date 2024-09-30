@@ -419,7 +419,7 @@
 
 .promotion-text {
     color: red;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     background-color: yellow;
     padding: 5px 10px;
@@ -479,7 +479,7 @@
 }
 
 .spotify-logo {
-    width: 55px; /* Ajustez la taille du logo selon vos besoins */
+    width: 45px; /* Ajustez la taille du logo selon vos besoins */
     height: auto;
     margin-left: 5px; /* Espace entre le texte et le logo */
     vertical-align: middle; /* Aligner le logo avec le texte */
