@@ -1,0 +1,57 @@
+[
+    {
+      "name": "Touch Screen Airpods Pro 2 anc-enc USB-C",
+      "price": "200 MAD",
+      "twoPrice": "350 MAD",
+      "oldPrice": "400 MAD",
+      "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
+      "primaryImage": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
+      "features": [
+        "Réduction du bruit active",
+        "Transparence adaptative",
+        "Son personnalisé",
+        "Microphone de haute qualité"
+      ],
+      "images": [
+        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/kNf7patL2WYnoxOEZZsMoi0ezmLujq3fcedQdKEZ_sm.jpeg",
+        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/OaJQHDf7dhXuaFHn0lO9q7uCWnE0tX4TwlehOmo8_sm.jpeg"
+      ],
+      "category": "AirPods"
+    },
+    {
+      "name": "AirPods Pro (2nd generation) USB-C Made USA",
+      "price": "150 MAD",
+      "oldPrice": "350 MAD",
+      "description": "La version améliorée des AirPods Pro avec connectivité USB-C et réduction active du bruit.",
+      "primaryImage": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
+      "images": [
+        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
+        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpg"
+      ],
+      "category": "AirPods"
+    },
+    {
+      "name": "Lenovo ThinkPad X1 Carbon",
+      "price": "1500 MAD",
+      "oldPrice": "2000 MAD",
+      "description": "Le Lenovo ThinkPad X1 Carbon offre une performance professionnelle, une durabilité exceptionnelle et une longue autonomie.",
+      "primaryImage": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
+      "images": [
+        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
+        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpg"
+      ],
+      "category": "PC"
+    },
+    {
+      "name": "iPhone 13 Pro Max",
+      "price": "1200 MAD",
+      "oldPrice": "1400 MAD",
+      "description": "Le iPhone 13 Pro Max offre des performances exceptionnelles, un écran OLED et un système de caméra avancé.",
+      "primaryImage": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
+      "images": [
+        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
+        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpg"
+      ],
+      "category": "Téléphones"
+    }
+  ]
