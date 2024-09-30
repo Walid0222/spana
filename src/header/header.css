@@ -1,12 +1,12 @@
 /* Partie supérieure du header avec l'information de livraison */
 .header-top {
-    background-color: #49a580;
+    background-color: #4765c3;
     color: white;
     text-align: center;
     padding: 1px 0;
     font-size: 14px;
     letter-spacing: 0.5px;
-    border-bottom: 1px solid #3e8466;
+    border-bottom: 1px solid #4765c3;
   }
   
   /* Partie principale du header */
@@ -24,14 +24,14 @@
   
   .logo h1 {
     font-size: 28px;
-    color: #49a580;
+    color: #4765c3;
     font-weight: 700;
     letter-spacing: 1.5px;
     margin: 0;
   }
   
   .cart a {
-    color: #49a580;
+    color: #4765c3;
     text-decoration: none;
     font-size: 18px;
     display: flex;
@@ -49,7 +49,7 @@
     display: none; /* Cache le bouton sur les grands écrans */
     font-size: 28px;
     cursor: pointer;
-    color: #49a580;
+    color: #4765c3;
   }
   
   /* Side Drawer */
@@ -79,14 +79,14 @@
   }
   
   .side-drawer ul li a {
-    color: #49a580;
+    color: #4765c3;
     text-decoration: none;
     font-size: 18px;
     display: block;
   }
   
   .side-drawer ul li a:hover {
-    color: #3e8466;
+    color: #4765c3;
   }
   
   /* Bouton de fermeture */
@@ -96,7 +96,7 @@
     right: 20px;
     font-size: 30px;
     cursor: pointer;
-    color: #49a580;
+    color: #4765c3;
   }
   
   /* Overlay sombre pour l'arrière-plan lorsque le menu est ouvert */

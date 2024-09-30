@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-column">
-          <h3>LikeOrg Shop</h3>
+          <h3>iMarket</h3>
           <p>Livraison sous 24 heures - paiement à la livraison</p>
         </div>
 
@@ -21,8 +21,8 @@ const Footer = () => {
 
         <div className="footer-column">
           <h3>Contact</h3>
-          <p>Email : contact@likeorgshop.com</p>
-          <p>Téléphone : +212 123 456 789</p>
+          <p>Email : contact.imarketma@gmail.com</p>
+          <p>Téléphone : +212</p>
           <div className="social-icons">
             <a href="https://facebook.com"><i className="fab fa-facebook"></i></a>
             <a href="https://twitter.com"><i className="fab fa-twitter"></i></a>
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2024 LikeOrg Shop - Tous droits réservés</p>
+        <p>© 2024 iMarket - Tous droits réservés</p>
       </div>
     </footer>
   );

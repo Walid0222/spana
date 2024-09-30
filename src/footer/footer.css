@@ -23,7 +23,7 @@
   .footer-column h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #49a580;
+    color: #4765c3;
   }
   
   .footer-column p, .footer-column ul, .footer-column li {
@@ -43,7 +43,7 @@
   }
   
   .footer-column ul li a:hover {
-    color: #49a580;
+    color: #4765c3;
   }
   
   /* Icônes des réseaux sociaux */
@@ -59,7 +59,7 @@
   }
   
   .social-icons a:hover {
-    color: #49a580;
+    color: #4765c3;
   }
   
   /* Style du bas du footer */
