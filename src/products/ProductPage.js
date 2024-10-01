@@ -245,8 +245,8 @@ const ProductPage = () => {
 
                 <h1 style={{ fontSize: '15px' }}>   ✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر</h1>
                 <p className="price">
-                    <span className="new-price">{price} درهم</span>{' '}
-                    <span className="old-price">{product.oldPrice} درهم</span>
+                    <span className="new-price">د.م{price} </span>
+                    <span className="old-price">د.م{product.oldPrice} </span>
                 </p>
 
                 {/* Formulaire d'achat */}
@@ -311,7 +311,7 @@ const ProductPage = () => {
                                 defaultChecked
                                 onChange={handlePriceChange}
                             />
-                            <p> قطعة واحدة ب {product.price} درهم   </p><span className="promotion-small">-50%</span>
+                            <p>  واحدة ب {product.price} درهم   </p><span className="promotion-small">-50%</span>
 
                         </div>
                         <div className="radio-group">
@@ -345,9 +345,10 @@ const ProductPage = () => {
                     </div>
                     <div className="countdown-days">
                         <span> أيام</span>
-                        <span> ساعات</span>
-                        <span> دقائق</span>
                         <span> ثواني</span>
+                        <span> دقائق</span>
+                        <span> ساعات</span>
+
                     </div>
                 </div>
 

@@ -22,12 +22,13 @@
     z-index: 1000;
   }
   
-  .logo h1 {
+  .logo h1 a{
     font-size: 28px;
     color: #4765c3;
     font-weight: 700;
     letter-spacing: 1.5px;
     margin: 0;
+    text-decoration: none;
   }
   
   .cart a {

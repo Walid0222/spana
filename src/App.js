@@ -4,7 +4,6 @@ import Header from './header/header';
 import ProductList from './products/ProductList';  
 import ProductPage from './products/ProductPage';  
 import Footer from './footer/footer';  
-import Banner from './Banner/banner';  
 import './App.css';
 
 function AppContent() {
@@ -14,9 +13,9 @@ function AppContent() {
     <div className="App">
       <Header />
       {/* Afficher la bannière seulement sur la page d'accueil */}
-      {location.pathname === '/' && <Banner />}
+      
       <Routes>
-        <Route path="/showingproduct" element={<ProductList />} />
+        <Route path="/" element={<ProductList />} />
         <Route path="/product/:productName" element={<ProductPage />} />
       </Routes>
       <Footer />

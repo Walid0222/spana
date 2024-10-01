@@ -1,3 +1,4 @@
+
 /* Styles globaux pour la page produit */
 .product-page {
     display: flex;
@@ -12,6 +13,7 @@
 }
 
 /* Sidebar avec les images miniatures (à gauche, centré) */
+/* Styles pour la sidebar */
 .sidebar {
     width: 40%;
     display: flex;
@@ -20,6 +22,17 @@
     margin-right: 20px;
 }
 
+/* Styles pour rendre la sidebar sticky sur les écrans de bureau */
+@media (min-width: 768px) {
+    .sidebar {
+        position: sticky; /* Rend l'élément fixe lors du défilement */
+        top: 20px; /* Distance par rapport au haut de la page */
+        max-height: calc(100vh - 20px); /* Ajustez la hauteur pour qu'elle ne dépasse pas la hauteur de la fenêtre */
+        overflow-y: auto; /* Ajoute le défilement vertical si nécessaire */
+        background-color: white; /* Assurez-vous que le fond est blanc */
+        padding: 10px; /* Ajoutez un peu de rembourrage */
+    }
+}
 /* Image principale agrandie */
 .main-image {
     width: 100%;

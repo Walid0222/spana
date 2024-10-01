@@ -5,12 +5,11 @@
       "twoPrice": "349 ",
       "oldPrice": "429 ",
       "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
-      "primaryImage": "/airpodpro2/image3.jpeg",
+      "primaryImage": "/airpodspro2/image3.jpeg",
       "features": [
-    "💥 اجي تشوف معايا مميزات ديال هاد Airpods Pro 2 eme generation لي جابت ليكم iMarket :",
-    "✅ كيخدمو بحال اوريجينال",
+    "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
     "✅ كيشدو ف الشارج حتال 24 ساعة",
-    "✅ خاصية GPS في حال توضرو ليك",
+    "✅ GPS خاصية  في حال توضرو ليك",
     "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
     "✅ كيخدمو فجميع انواع الهواتف",
     "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
@@ -21,6 +20,7 @@
         "/airpodspro2/image1.jpeg",
         "/airpodspro2/image4.jpeg"
       ],
+      "rating":"5",
       "category": "AirPods"
     },
     {
@@ -33,6 +33,7 @@
         "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
         "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpg"
       ],
+      "rating":"5",
       "category": "AirPods"
     },
     {
@@ -45,6 +46,7 @@
         "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
         "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpg"
       ],
+      "rating":"5",
       "category": "PC"
     },
     {
@@ -57,6 +59,7 @@
         "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
         "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpg"
       ],
+      "rating":"5",
       "category": "Téléphones"
     }
   ]

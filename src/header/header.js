@@ -17,7 +17,7 @@ const Header = () => {
 
             <header className="header-main">
                 <div className="logo">
-                    <h1>iMarket</h1>
+                    <h1 ><a href="/">iMarket</a></h1>
                 </div>
 
                 {/* Bouton menu burger pour petits écrans */}

@@ -14,8 +14,8 @@ const Footer = () => {
           <h3>روابط سريعة</h3>
           <ul>
             <li><a href="/">الرئيسية</a></li>
-            <li><a href="/collections">المجموعات</a></li>
-            <li><a href="/contact">اتصل بنا</a></li>
+            <li><a href="#">المجموعات</a></li>
+            <li><a href="#">اتصل بنا</a></li>
           </ul>
         </div>
 
