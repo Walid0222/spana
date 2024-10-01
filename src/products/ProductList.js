@@ -1,30 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import './ProductList.css';
 import { Link } from 'react-router-dom';
-import productsData from '../db/products.json'; // Importer le fichier JSON des produits
+import productsData from '../db/products.json';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [stock, setStock] = useState({}); // État pour stock des produits
 
   useEffect(() => {
-    setProducts(productsData); // Charger les produits depuis le fichier JSON
+    setProducts(productsData);
     const uniqueCategories = [...new Set(productsData.map(product => product.category))];
-    setCategories(uniqueCategories); // Obtenir les catégories uniques
+    setCategories(uniqueCategories);
+
+    // Initialiser le stock uniquement lors du chargement de la page
+    const initialStock = {};
+    productsData.forEach(product => {
+      initialStock[product.name] = getRandomStock(); // Générer un stock aléatoire
+    });
+    setStock(initialStock);
   }, []);
 
-  // Fonction pour générer un stock aléatoire entre 2 et 15
   const getRandomStock = () => {
     return Math.floor(Math.random() * (15 - 2 + 1)) + 2;
   };
 
   return (
-    
     <div className="product-section">
-      <div className="banner">
-      <img src={`${process.env.PUBLIC_URL}/banner.png`} alt="Bannière" className="banner-image" />
-      
-    </div>
+      <div className="bannerPromo">
+        <img src={`${process.env.PUBLIC_URL}/banner.png`} alt="Promotion -65%" className="banner-image" />
+        <p className="promotion-text">Liquidation : -65%</p>
+      </div>
 
       {categories.map((category, categoryIndex) => (
         <div key={categoryIndex} className="category-section">
@@ -34,26 +40,33 @@ const ProductList = () => {
               .filter(product => product.category === category)
               .map((product, index) => (
                 <div key={index} className="product-card">
-
-                  <Link to={`/product/${encodeURIComponent(product.name)}`} className="view-details">
+                  <Link to={product.stock === "out of stock" ? "#" : `/product/${encodeURIComponent(product.name)}`} className={`view-details ${product.stock === "out of stock" ? "disabled-link" : ""}`}>
                     <img src={product.primaryImage} alt={product.name} className="product-image" />
                     <h2 className="categoryCard">{category}</h2>
-
                     <h3 className="product-name">{product.name}</h3>
                     <p className="product-price">
-                      <span className="new-price">{product.price}Dh</span>
-                      <span className="old-price">{product.oldPrice}Dh</span>
+                      <span className="new-price">{product.price} Dh</span>
+                      <span className="old-price">{product.oldPrice} Dh</span>
+                      <span className="bonus">{product.bonus}</span>
+
                     </p>
-                    <div className="product-stock">
-                      Stock: {getRandomStock()} {/* Affichage du stock aléatoire */}
-                    </div>
+                    <span className="garantie">Garantie incluse</span>
+                    <div className="promotion-badge">Promo -65%</div>
+
+                    {product.stock === "out of stock" ? (
+                      <div className="promotion-badge">Rupture de stock</div>
+                    ) : (
+                      <div className="product-stock">
+                        Stock: {stock[product.name]} {/* Affichage du stock basé sur l'état */}
+                      </div>
+                    )}
+
                     <div className="product-rating">
-                      {/* Affichage des étoiles et du nombre d'étoiles entre parenthèses */}
                       <span className="stars">
-                        {'★'.repeat(product.rating)} {/* Afficher le nombre d'étoiles basé sur la note */}
-                        {'☆'.repeat(5 - product.rating)} {/* Compléter jusqu'à 5 étoiles */}
+                        {'★'.repeat(product.rating)}
+                        {'☆'.repeat(5 - product.rating)}
                       </span>
-                      <span className="rating-count"> ({product.rating})</span> {/* Nombre d'étoiles entre parenthèses */}
+                      <span className="rating-count"> ({product.nombreRating}) Satisfait</span>
                     </div>
                   </Link>
                 </div>

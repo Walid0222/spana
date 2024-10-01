@@ -235,15 +235,16 @@ const ProductPage = () => {
                     ))}
                 </div>
             </div>
-            <p className="promotion-text">PROMO -65%</p>
             <div id='firstForm'></div>
 
             <div className="product-content">
-                <h1 style={{ fontSize: '22px' }}>{product.name}  {product.name.includes("Spotify premium") && (
+            <p className="promotion-text">PROMO LIQUIDATION -65%</p>
+
+                <h1 style={{ fontSize: '20px' }}>{product.name}  {product.name.includes("Spotify premium") && (
                     <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />
                 )}</h1>
 
-                <h1 style={{ fontSize: '15px' }}>   ✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر</h1>
+                <h1 style={{ fontSize: '16px',fontWeight: 'bold' }}>   ✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر</h1>
                 <p className="price">
                     <span className="new-price">د.م{price} </span>
                     <span className="old-price">د.م{product.oldPrice} </span>

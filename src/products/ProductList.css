@@ -77,7 +77,17 @@
   color: #363636;
   margin-right: 10px;
 }
-
+.garantie {
+  font-weight: bold;
+  color: #363636;
+  margin-right: 10px;
+}
+.bonus {
+  
+  font-weight: bold;
+  color: #363636;
+  margin-right: 10px;
+}
 .new-price {
   color: #49a580;
   font-weight: bold;
@@ -171,4 +181,14 @@
     width: 100%; /* Prendre toute la largeur */
     height: 200px;
   }
+}
+/* Style pour le badge de promotion */
+.promotion-badge {
+  background-color: #4765c3; /* Couleur d'arrière-plan du badge */
+  color: white; /* Couleur du texte */
+  font-weight: bold; /* Texte en gras */
+  padding: 5px; /* Espacement intérieur */
+  border-radius: 5px; /* Coins arrondis */
+  text-align: center; /* Centre le texte */
+  margin: 10px 0; /* Marge en haut et en bas */
 }

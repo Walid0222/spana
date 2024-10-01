@@ -11,9 +11,9 @@ const Header = () => {
     return (
         <>
             <div className="header-top">
-    <p style={{  fontSize:'15px' }}>✨ عرض خاص: التوصيل بالمجان و الدفع عند الاستلام 🚚</p>
-    <p style={{ fontWeight: 'bold', fontSize:'17px' }}> أسرع واطلب الآن ⏰</p>
-</div>
+                <p style={{ fontSize: '15px', fontWeight: 'bold' }}>✨ عرض خاص: التوصيل بالمجان و الدفع عند الاستلام 🚚</p>
+                <p style={{ fontWeight: 'bold', fontSize: '17px' }}> سارع واطلب الآن ⏰</p>
+            </div>
 
             <header className="header-main">
                 <div className="logo">

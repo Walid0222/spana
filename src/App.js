@@ -15,8 +15,8 @@ function AppContent() {
       {/* Afficher la bannière seulement sur la page d'accueil */}
       
       <Routes>
-        <Route path="" element={<ProductList />} />
-        <Route path="" element={<ProductPage />} />
+        <Route path="/" element={<ProductList />} />
+        <Route path="/product/:productName" element={<ProductPage />} />
       </Routes>
       <Footer />
     </div>

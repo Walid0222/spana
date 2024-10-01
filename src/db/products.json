@@ -4,6 +4,7 @@
         "price": "199 ",
       "twoPrice": "349 ",
       "oldPrice": "429 ",
+      "bonus":"Avec Spotify Gratuit",
       "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
       "primaryImage": "/airpodspro2/image3.jpeg",
       "features": [
@@ -21,45 +22,34 @@
         "/airpodspro2/image4.jpeg"
       ],
       "rating":"5",
+      "nombreRating":"565",
       "category": "AirPods"
     },
     {
-      "name": "AirPods Pro (2nd generation) USB-C e USA",
-      "price": "150 ",
-      "oldPrice": "350 ",
-      "description": "La version améliorée des AirPods Pro avec connectivité USB-C et réduction active du bruit.",
-      "primaryImage": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
+        "name": "AirPods Max ( Version USA 🇺🇸 ) + Spotify premium privé GRATUIT",
+        "price": "239 ",
+      "twoPrice": "349 ",
+      "oldPrice": "679 ",
+      "bonus":"Avec Spotify Gratuit",
+      "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
+      "primaryImage": "/airpodsmax/image1.png",
+      "stock": "out of stock",
+      "features": [
+    "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
+    "✅ كيشدو ف الشارج حتال 24 ساعة",
+    "✅ GPS خاصية  في حال توضرو ليك",
+    "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
+    "✅ كيخدمو فجميع انواع الهواتف",
+    "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
+    "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
+],
       "images": [
-        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
-        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpg"
+        "/airpodspro2/image3.jpeg",
+        "/airpodspro2/image1.jpeg",
+        "/airpodspro2/image4.jpeg"
       ],
       "rating":"5",
+      "nombreRating":"698",
       "category": "AirPods"
-    },
-    {
-      "name": "Lenovo ThinkPad X1 Carbon",
-      "price": "1500 ",
-      "oldPrice": "2000 ",
-      "description": "Le Lenovo ThinkPad X1 Carbon offre une performance professionnelle, une durabilité exceptionnelle et une longue autonomie.",
-      "primaryImage": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
-      "images": [
-        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
-        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpg"
-      ],
-      "rating":"5",
-      "category": "PC"
-    },
-    {
-      "name": "iPhone 13 Pro Max",
-      "price": "1200 ",
-      "oldPrice": "1400 ",
-      "description": "Le iPhone 13 Pro Max offre des performances exceptionnelles, un écran OLED et un système de caméra avancé.",
-      "primaryImage": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
-      "images": [
-        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/sByNNM178ObIvLoY9NF3RxUNCm0o7aWJCKaDPdyh_md.jpeg",
-        "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpg"
-      ],
-      "rating":"5",
-      "category": "Téléphones"
     }
   ]
