@@ -1,43 +1,20 @@
 [
     {
-      "name": "Ali",
-      "comment": "Produit conforme à la description, très satisfait.",
-      "rating": 5,
-      "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/LyUat7SB2OimRGfvh8Ss2DYcJX0AJJnUR1peyk75.jpeg"
-    },
-    {
-      "name": "Fatima",
-      "comment": "Excellent rapport qualité/prix, je recommande !",
-      "rating": 4,
-      "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/LyUat7SB2OimRGfvh8Ss2DYcJX0AJJnUR1peyk75.jpeg"
-    },
-    {
-      "name": "Youssef",
-      "comment": "Rapport qualité/prix incroyable, expédition rapide",
-      "rating": 5,
-      "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/Uh23v59HXlHN0S2Q0BBFKxNDSI81vcqi8Ls5hZB2.jpeg"
-    },
-    {
-      "name": "Sara",
-      "comment": "Le son est parfait et la réduction du bruit aussi.",
-      "rating": 5,
-      "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpghttps://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/62oYh8rdA3V9CMHfDMkXwDsr92UfolVOiBkHDl1p.jpeg"
-    },
-    {
-        "name": "Sara",
-        "comment": "Le son est parfait et la réduction du bruit aussi.",
+        "name": "علي",
+        "comment": "المنتج مطابق للوصف، أنا راضٍ جداً.",
         "rating": 5,
-        "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpghttps://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/62oYh8rdA3V9CMHfDMkXwDsr92UfolVOiBkHDl1p.jpeg"
-      },
-      {
-        "name": "Sara",
-        "comment": "Le son est parfait et la réduction du bruit aussi.",
+        "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/LyUat7SB2OimRGfvh8Ss2DYcJX0AJJnUR1peyk75.jpeg"
+    },
+    {
+        "name": "فاطمة",
+        "comment": "جودة ممتازة مقابل السعر، أنصح به!",
+        "rating": 4,
+        "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/LyUat7SB2OimRGfvh8Ss2DYcJX0AJJnUR1peyk75.jpeg"
+    },
+    {
+        "name": "يوسف",
+        "comment": "علاقة جودة/سعر مذهلة، شحن سريع",
         "rating": 5,
-        "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpghttps://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/62oYh8rdA3V9CMHfDMkXwDsr92UfolVOiBkHDl1p.jpeg"
-      },{
-        "name": "Sara",
-        "comment": "Le son est parfait et la réduction du bruit aussi.",
-        "rating": 5,
-        "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/products/9KDGwqlQkaX6bthEJQpKgvlmctCIHj4pl1dONJpo_md.jpghttps://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/62oYh8rdA3V9CMHfDMkXwDsr92UfolVOiBkHDl1p.jpeg"
-      }
-  ]
+        "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/Uh23v59HXlHN0S2Q0BBFKxNDSI81vcqi8Ls5hZB2.jpeg"
+    }
+]

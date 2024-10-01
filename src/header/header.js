@@ -11,10 +11,9 @@ const Header = () => {
     return (
         <>
             <div className="header-top">
-                <p>عرض خاص: التوصيل بالمجان و الدفع عند الاستلام</p>
-                <p style={{fontWeight:'bold'}}> اسرع واطلب الآن
-                </p>
-            </div>
+    <p style={{  fontSize:'15px' }}>✨ عرض خاص: التوصيل بالمجان و الدفع عند الاستلام 🚚</p>
+    <p style={{ fontWeight: 'bold', fontSize:'17px' }}> أسرع واطلب الآن ⏰</p>
+</div>
 
             <header className="header-main">
                 <div className="logo">
@@ -31,17 +30,17 @@ const Header = () => {
                         &times;
                     </div>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Collections</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">المجموعات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
                     </ul>
                 </nav>
 
                 {/* <div className="cart">
-          <a href="/cart">
-            <span className="cart-icon">🛒</span> 0 MAD
-          </a>
-        </div> */}
+                    <a href="/cart">
+                        <span className="cart-icon">🛒</span> 0 MAD
+                    </a>
+                </div> */}
             </header>
 
             {/* Overlay pour le fond lorsqu'on ouvre le menu */}

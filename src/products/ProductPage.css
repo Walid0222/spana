@@ -2,12 +2,13 @@
 .product-page {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end; /* Aligne le contenu à droite */
     align-items: flex-start;
     padding: 20px;
     font-family: Arial, sans-serif;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: right; /* Aligne le texte à droite */
 }
 
 /* Sidebar avec les images miniatures (à gauche, centré) */
@@ -53,6 +54,7 @@
 /* Contenu principal du produit */
 .product-content {
     width: 55%;
+    text-align: right; /* Aligne le texte à droite */
 }
 
 /* Titre du produit */
@@ -92,12 +94,15 @@
 
 .order-form input:not([type="radio"]),
 .order-form select {
+    font-size: 17px;
     width: 95%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: all 0.3s ease;
+    text-align: right; /* Aligne le texte et le placeholder à droite */
+
 }
 
 .order-form input:focus,
@@ -111,11 +116,12 @@
 .radio-group {
     display: flex;
     align-items: center;
+    justify-content: flex-end; /* Aligne le contenu à droite */
     margin-bottom: 10px;
 }
 
 .radio-group input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 10px; /* Espacement à droite du bouton radio */
 }
 
 /* Animation pour le bouton "Commander maintenant" */
@@ -205,7 +211,6 @@
     padding: 0 10px;
 }
 
-
 .countdown-days {
     font-size: 12px;
     font-weight: bold;
@@ -215,6 +220,7 @@
 .countdown-days span {
     padding: 0 10px;
 }
+
 /* Caractéristiques du produit */
 .features h3 {
     font-size: 20px;
@@ -232,23 +238,23 @@
     font-size: 16px;
 }
 
-  /* Avis clients */
-  .reviews h3 {
+/* Avis clients */
+.reviews h3 {
     font-size: 20px;
     margin-bottom: 15px;
     text-align: center;
-  }
-  
-  /* Container pour les avis avec scrolling horizontal */
-  .reviews-container {
+}
+
+/* Container pour les avis avec scrolling horizontal */
+.reviews-container {
     display: flex;
     overflow-x: auto;
     padding-bottom: 20px;
     gap: 20px;
-  }
-  
-  /* Styles fixes pour la taille des avis */
-  .review {
+}
+
+/* Styles fixes pour la taille des avis */
+.review {
     border-top: 1px solid #f0f0f0;
     padding-top: 10px;
     display: flex;
@@ -256,19 +262,19 @@
     align-items: center;
     min-width: 200px;
     text-align: center;
-  }
-  
-  .review strong {
+}
+
+.review strong {
     color: #333;
-  }
-  
-  .review p {
+}
+
+.review p {
     font-size: 14px;
     color: #555;
     margin: 10px 0;
-  }
-  
-  .review-image {
+}
+
+.review-image {
     width: 190px;
     height: auto;
     object-fit: cover;
@@ -277,8 +283,8 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
-  
+}
+
 .review-image.zoomed {
     transform: scale(1.5);
 }
@@ -296,7 +302,7 @@
     }
 
     .main-image {
-        max-width: 300px;
+        max-width: 350px;
     }
 
     .image-thumbnails {
@@ -345,29 +351,29 @@
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-  }
-  
-  /* Style pour la flèche gauche */
-  .left-arrow-decoration,
-  .right-arrow-decoration {
+}
+
+/* Style pour la flèche gauche */
+.left-arrow-decoration,
+.right-arrow-decoration {
     font-size: 24px;
     color: rgba(0, 0, 0, 0.5); /* Couleur semi-transparente pour un effet subtil */
     user-select: none; /* Empêche la sélection des flèches */
-  }
-  
-  /* Ajustement pour mobile uniquement */
-  @media (min-width: 769px) {
-    .arrows-decoration {
-      display: none; /* Masquer les flèches sur les écrans plus larges */
-    }
-  }
-  
-  /* Ajustement des marges pour espacer correctement */
-  .reviews-container {
-    margin-bottom: 10px;
-  }
+}
 
-  /* Popup des avis des acheteurs */
+/* Ajustement pour mobile uniquement */
+@media (min-width: 769px) {
+    .arrows-decoration {
+        display: none; /* Masquer les flèches sur les écrans plus larges */
+    }
+}
+
+/* Ajustement des marges pour espacer correctement */
+.reviews-container {
+    margin-bottom: 10px;
+}
+
+/* Popup des avis des acheteurs */
 .reviews-popup {
     position: fixed;
     bottom: 20px;
@@ -381,28 +387,28 @@
     cursor: pointer;
     animation: jump 1s infinite ease-in-out;
     z-index: 1000;
-  }
-  
-  /* Animation pour faire sauter l'icône */
-  @keyframes jump {
+}
+
+/* Animation pour faire sauter l'icône */
+@keyframes jump {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
-  
-  /* Ajouter une transition pour le clic */
-  .reviews-popup:active {
+}
+
+/* Ajouter une transition pour le clic */
+.reviews-popup:active {
     background-color: #4765c3;
     animation: none; /* Arrête l'animation au clic */
-  }
+}
 
-  .error-message {
+.error-message {
     color: red;
     font-size: 14px;
     margin-top: 5px;
@@ -447,7 +453,6 @@
     font-weight: bold;
     margin-left: 5px;
     background-color: yellow;
-
 }
 
 .fixed-bottom-order {
@@ -462,15 +467,18 @@
 }
 
 .fixed-order-button {
-    background-color: #9d00d1;
+    background-color: #4765c3;
     color: white;
     border: none;
     padding: 12px 20px;
     font-size: 18px;
     cursor: pointer;
+    border-radius: 5px;
     width: 100%;
-    max-width: 500px; /* Limite la taille du bouton sur les grands écrans */
+    position: relative;
+    overflow: hidden;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: pulse 4s infinite;
 }
 
 .fixed-order-button:hover {
@@ -483,4 +491,35 @@
     height: auto;
     margin-left: 5px; /* Espace entre le texte et le logo */
     vertical-align: middle; /* Aligner le logo avec le texte */
+}
+
+/* Alignement des boutons radio */
+.radio-group {
+    display: flex;
+    align-items: center; /* Centre le texte et le radio button verticalement */
+    justify-content: flex-end; 
+}
+
+.radio-group input[type="radio"] {
+    -webkit-appearance: none; /* Supprime l'apparence par défaut du radio button sur les navigateurs WebKit (Chrome, Safari) */
+    -moz-appearance: none; /* Supprime l'apparence par défaut du radio button sur Firefox */
+    appearance: none; /* Supprime l'apparence par défaut sur les autres navigateurs */
+    width: 20px; /* Largeur du cercle */
+    height: 20px; /* Hauteur du cercle */
+    border: 2px solid #007BFF; /* Bordure du cercle */
+    border-radius: 50%; /* Forme ronde */
+    outline: none; /* Supprime le contour */
+    cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
+    position: relative; /* Pour positionner le pseudo-élément */
+}
+
+.radio-group input[type="radio"]:checked::before {
+    content: ''; /* Nécessaire pour afficher le pseudo-élément */
+    position: absolute; /* Positionne le pseudo-élément par rapport au parent */
+    top: 0px; /* Ajustez la position selon vos besoins */
+    left: 0px; /* Ajustez la position selon vos besoins */
+    width: 20px; /* Taille du cercle intérieur */
+    height: 20px; /* Taille du cercle intérieur */
+    border-radius: 50%; /* Forme ronde */
+    background-color: #007BFF; /* Couleur de fond lorsque sélectionné */
 }

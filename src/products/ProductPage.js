@@ -54,46 +54,44 @@ const ProductPage = () => {
         const newErrors = {};
 
         if (!formData.name) {
-            newErrors.name = "Le nom est requis";
+            newErrors.name = "الاسم مطلوب";
         }
         if (!formData.phone) {
-            newErrors.phone = "Le téléphone est requis";
+            newErrors.phone = "رقم الهاتف مطلوب";
         }
         if (!formData.address) {
-            newErrors.address = "L'adresse est requise";
+            newErrors.address = "العنوان مطلوب";
         }
         if (!formData.city) {
-            newErrors.city = "La ville est requise";
+            newErrors.city = "المدينة مطلوبة";
         }
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
 
-    
-
     const handleFormSubmit = async (e) => {
         e.preventDefault();
-    
+
         // Si le formulaire contient des erreurs, on scroll vers le premier champ avec erreur
         if (!validateForm()) {
             scrollToError();  // Appel pour scroller vers le premier champ manquant
-    
+
             setTimeout(() => {
                 Swal.fire({
-                    title: 'Erreur!',
-                    text: "Merci de vérifier que vous avez rempli toutes les informations du formulaire.",
+                    title: 'خطأ!',
+                    text: "يرجى التأكد من أنك قد ملأت جميع معلومات النموذج.",
                     icon: 'error',
-                    confirmButtonText: 'D\'accord'
+                    confirmButtonText: 'حسناً'
                 });
             }, 1200);
             return;
-            
+
         }
-    
+
         // Ajoute la date et l'heure actuelles
         const currentDateTime = new Date();
-    
+
         try {
             // Ajouter les données du formulaire à Firestore avec un statut "pending"
             const docRef = await addDoc(collection(db, "formSubmissions"), {
@@ -103,31 +101,31 @@ const ProductPage = () => {
                 time: currentDateTime.toLocaleTimeString(),
                 status: 'pending' // Statut par défaut
             });
-    
+
             // Enregistrer l'ID du document dans l'état
             setDocId(docRef.id);
-    
+
             // SweetAlert pour confirmation
             Swal.fire({
-                title: 'Succès!',
-                text: `Formulaire soumis avec succès. ID: ${nextId}`,
+                title: 'نجاح!',
+                text: `تم تقديم النموذج بنجاح. الرقم التعريفي: ${nextId}`,
                 icon: 'success',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'حسناً'
             });
-    
+
             // Mettre à jour le prochain ID
             setNextId(nextId + 1);
         } catch (e) {
             // SweetAlert pour erreur
             Swal.fire({
-                title: 'Erreur!',
-                text: `Erreur lors de la soumission du formulaire: ${e.message}`,
+                title: 'خطأ!',
+                text: `خطأ أثناء تقديم النموذج: ${e.message}`,
                 icon: 'error',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'حسناً'
             });
         }
     };
-    
+
     // Fonction pour scroller vers le premier champ manquant en cas d'erreur
     const scrollToError = () => {
         if (errors.name) {
@@ -217,14 +215,14 @@ const ProductPage = () => {
     };
 
     if (!product || !product.name) {
-        return <div>Produit non trouvé.</div>;
+        return <div>المنتج غير موجود.</div>;
     }
 
     return (
         <div className="product-page">
             <div className="sidebar">
 
-                <img src={selectedImage || ''} alt="Produit" className="main-image" />
+                <img src={selectedImage || ''} alt="منتج" className="main-image" />
                 <div className="image-thumbnails">
                     {product.images && product.images.map((image, index) => (
                         <img
@@ -237,20 +235,20 @@ const ProductPage = () => {
                     ))}
                 </div>
             </div>
-            <p className="promotion-text">Promotion : -50%</p>
+            <p className="promotion-text">PROMO -65%</p>
             <div id='firstForm'></div>
 
             <div className="product-content">
-                <h1 style={{fontSize:'22px'}}>{product.name}  {product.name.includes("Spotify premium") && (
-                        <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="Spotify Logo" className="spotify-logo" />
-                    )}</h1>
-                
-                <h1 style={{fontSize:'15px'}}> 🚚 التوصيل مجاني و الدفع عند الإستلام </h1>
+                <h1 style={{ fontSize: '22px' }}>{product.name}  {product.name.includes("Spotify premium") && (
+                    <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />
+                )}</h1>
+
+                <h1 style={{ fontSize: '15px' }}>   ✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر</h1>
                 <p className="price">
-                    <span className="new-price">{price}</span>{' '}
-                    <span className="old-price">{product.oldPrice}</span>
+                    <span className="new-price">{price} درهم</span>{' '}
+                    <span className="old-price">{product.oldPrice} درهم</span>
                 </p>
-                
+
                 {/* Formulaire d'achat */}
                 <div id="orderForm" className="order-form" ref={formRef}>
 
@@ -259,7 +257,7 @@ const ProductPage = () => {
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Nom et Prénom"
+                                placeholder="الاسم "
                                 value={formData.name}
                                 onChange={handleChange}
                                 ref={nameRef}
@@ -271,7 +269,7 @@ const ProductPage = () => {
                             <input
                                 type="text"
                                 name="phone"
-                                placeholder="Numéro de téléphone"
+                                placeholder="رقم الهاتف"
                                 value={formData.phone}
                                 onChange={handleChange}
                                 ref={phoneRef}
@@ -283,7 +281,7 @@ const ProductPage = () => {
                             <input
                                 type="text"
                                 name="address"
-                                placeholder="Adresse"
+                                placeholder="العنوان"
                                 value={formData.address}
                                 onChange={handleChange}
                                 ref={addressRef}
@@ -295,7 +293,7 @@ const ProductPage = () => {
                             <input
                                 type="text"
                                 name="city"
-                                placeholder="Ville"
+                                placeholder="المدينة"
                                 value={formData.city}
                                 onChange={handleChange}
                                 ref={cityRef}
@@ -303,7 +301,7 @@ const ProductPage = () => {
                             {errors.city && <p className="error-message">{errors.city}</p>}
                         </div>
 
-                        <h3>Choisissez une option :</h3>
+                        <h3>اختر خيارًا :</h3>
                         <div className="radio-group">
                             <input
                                 type="radio"
@@ -313,7 +311,8 @@ const ProductPage = () => {
                                 defaultChecked
                                 onChange={handlePriceChange}
                             />
-                            <p>1 pièce pour {product.price} <span className="promotion-small">-50%</span></p>
+                            <p> قطعة واحدة ب {product.price} درهم   </p><span className="promotion-small">-50%</span>
+
                         </div>
                         <div className="radio-group">
                             <input
@@ -323,40 +322,38 @@ const ProductPage = () => {
                                 value="two"
                                 onChange={handlePriceChange}
                             />
-                            <p>2 pièces pour {product.twoPrice} <span className="promotion-small">-65%</span></p>
+                            <p>العرض الثاني 2 ب     {product.twoPrice} درهم </p><span className="promotion-small">-65%</span>
+
                         </div>
 
-                        <button type="submit" className="order-button">Commander maintenant</button>
+                        <button type="submit" className="order-button">➤ للطلب إضغط هنا</button>
                     </form>
                 </div>
                 <div className="fixed-bottom-order">
-                    <button type="button" className="fixed-order-button" onClick={handleFormSubmit}>Commander maintenant</button>
+                    <button type="button" className="fixed-order-button" onClick={handleFormSubmit}>➤ للطلب إضغط هنا</button>
                 </div>
-                {/* Afficher l'ID généré */}
-                {docId && (
-                    <p>ID du document soumis : {docId}</p>
-                )}
+
 
                 {/* Compte à rebours */}
                 <div className="countdown">
-                    <h3>Offre se termine dans :</h3>
+                    <h3>سينتهي العرض في :</h3>
                     <div className="countdown-timer">
-                        <span>0 :</span>
                         <span>{String(timeLeft.hours).padStart(2, '0')} :</span>
                         <span>{String(timeLeft.minutes).padStart(2, '0')} :</span>
-                        <span>{String(timeLeft.seconds).padStart(2, '0')}</span>
+                        <span>{String(timeLeft.seconds).padStart(2, '0')}:</span>
+                        <span>0 </span>
                     </div>
                     <div className="countdown-days">
-                        <span> Jours</span>
-                        <span> Hours</span>
-                        <span> Minutes</span>
-                        <span>Seconds</span>
+                        <span> أيام</span>
+                        <span> ساعات</span>
+                        <span> دقائق</span>
+                        <span> ثواني</span>
                     </div>
                 </div>
 
                 {/* Caractéristiques du produit */}
                 <div className="features">
-                    <h3>Caractéristiques principales</h3>
+                    <h3>الميزات الرئيسية</h3>
                     <ul>
                         {product.features && product.features.map((feature, index) => (
                             <li key={index}>{feature}</li>
@@ -366,14 +363,14 @@ const ProductPage = () => {
 
                 {/* Images du produit */}
                 <div className="product-images-section mobile-only">
-                    <h3>Images du produit</h3>
+                    {/* <h3>صور المنتج</h3> */}
                     <div className="product-images-container">
                         {product.images && product.images.map((image, index) => (
                             <img
                                 key={index}
                                 src={image}
-                                alt={`Produit image ${index}`}
                                 className="product-image"
+                                alt={`Product Image ${index + 1}`} // Ajoutez un alt pour l'accessibilité
                             />
                         ))}
                     </div>
@@ -385,7 +382,7 @@ const ProductPage = () => {
 
                 {/* Avis clients (mobile only) */}
                 <div className="reviews mobile-only">
-                    <h3>Avis clients</h3>
+                    <h3>آراء العملاء</h3>
                     <div className="reviews-container">
                         {reviews.map((review, index) => (
                             <div key={index} className="review">
