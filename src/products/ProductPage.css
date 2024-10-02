@@ -536,3 +536,41 @@
     border-radius: 50%; /* Forme ronde */
     background-color: #007BFF; /* Couleur de fond lorsque sélectionné */
 }
+
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f9f9f9; /* Couleur de fond douce */
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.not-found-message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4765c3; /* Couleur rouge pour attirer l'attention */
+}
+
+.not-found-description {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555; /* Couleur de texte pour la description */
+}
+
+.back-to-menu-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4765c3; /* Couleur du bouton */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-to-menu-button:hover {
+    background-color: #4765c3; /* Couleur du bouton au survol */
+}

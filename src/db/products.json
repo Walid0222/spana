@@ -2,54 +2,110 @@
     {
         "name": "AirPods Pro 2ᵉ génération ( Version USA 🇺🇸 ) + Spotify premium privé GRATUIT ✅ + Pochette GRATUITE ✅",
         "price": "199 ",
-      "twoPrice": "349 ",
-      "oldPrice": "429 ",
-      "bonus":"Avec Spotify Gratuit",
-      "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
-      "primaryImage": "/airpodspro2/image3.jpeg",
-      "features": [
-    "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
-    "✅ كيشدو ف الشارج حتال 24 ساعة",
-    "✅ GPS خاصية  في حال توضرو ليك",
-    "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
-    "✅ كيخدمو فجميع انواع الهواتف",
-    "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
-    "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
-],
-      "images": [
-        "/airpodspro2/image3.jpeg",
-        "/airpodspro2/image1.jpeg",
-        "/airpodspro2/image4.jpeg"
-      ],
-      "rating":"5",
-      "nombreRating":"565",
-      "category": "AirPods"
+        "twoPrice": "349 ",
+        "oldPrice": "429 ",
+        "bonus1": "✅ سبوتيفاي خاص مجاني ",
+        "bonus2": "✅ حافظة ايربودز مجانية ",
+        "bonus3": "✅ حافظة ايربودز مجانية ",
+        "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
+        "primaryImage": "/airpodspro2/image3.jpeg",
+        "features": [
+            "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
+            "✅ كيشدو ف الشارج حتال 24 ساعة",
+            "✅ GPS خاصية  في حال توضرو ليك",
+            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
+            "✅ كيخدمو فجميع انواع الهواتف",
+            "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
+            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
+        ],
+        "images": [
+            "/airpodspro2/image3.jpeg",
+            "/airpodspro2/image1.jpeg",
+            "/airpodspro2/image4.jpeg"
+        ],
+        "rating": "5",
+        "nombreRating": "565",
+        "category": "AirPods"
     },
     {
         "name": "AirPods Max ( Version USA 🇺🇸 ) + Spotify premium privé GRATUIT",
         "price": "239 ",
-      "twoPrice": "349 ",
-      "oldPrice": "679 ",
-      "bonus":"Avec Spotify Gratuit",
-      "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
-      "primaryImage": "/airpodsmax/image1.png",
-      "stock": "out of stock",
-      "features": [
-    "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
-    "✅ كيشدو ف الشارج حتال 24 ساعة",
-    "✅ GPS خاصية  في حال توضرو ليك",
-    "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
-    "✅ كيخدمو فجميع انواع الهواتف",
-    "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
-    "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
-],
-      "images": [
-        "/airpodspro2/image3.jpeg",
-        "/airpodspro2/image1.jpeg",
-        "/airpodspro2/image4.jpeg"
-      ],
-      "rating":"5",
-      "nombreRating":"698",
-      "category": "AirPods"
+        "twoPrice": "349 ",
+        "oldPrice": "679 ",
+        "bonus": "Avec Spotify Gratuit",
+        "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
+        "primaryImage": "/airpodsmax/image1.png",
+        "stock": "out of stock",
+        "features": [
+            "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
+            "✅ كيشدو ف الشارج حتال 24 ساعة",
+            "✅ GPS خاصية  في حال توضرو ليك",
+            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
+            "✅ كيخدمو فجميع انواع الهواتف",
+            "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
+            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
+        ],
+        "images": [
+            "/airpodspro2/image3.jpeg",
+            "/airpodspro2/image1.jpeg",
+            "/airpodspro2/image4.jpeg"
+        ],
+        "rating": "5",
+        "nombreRating": "698",
+        "category": "AirPods"
+    },
+    {
+        "name": "Chargeur iPhone + Cable GRATUIT : Préservez l’État de Votre Batterie ! 🔋",
+        "price": "199 ",
+        "twoPrice": "199 ",
+        "oldPrice": "589 ",
+        "bonus": "Avec câble Gratuit",
+        "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
+        "primaryImage": "/chargeurEtCable/image1.png",
+        "stock": "out of stock",
+        "features": [
+            "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
+            "✅ كيشدو ف الشارج حتال 24 ساعة",
+            "✅ GPS خاصية  في حال توضرو ليك",
+            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
+            "✅ كيخدمو فجميع انواع الهواتف",
+            "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
+            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
+        ],
+        "images": [
+            "/airpodspro2/image3.jpeg",
+            "/airpodspro2/image1.jpeg",
+            "/airpodspro2/image4.jpeg"
+        ],
+        "rating": "5",
+        "nombreRating": "964",
+        "category": "Accessoire"
+    },
+    {
+        "name": "Powerbank xiaomi Fast Charge 20000mAh 🔋",
+        "price": "229 ",
+        "twoPrice": "199 ",
+        "oldPrice": "400 ",
+        "bonus": "",
+        "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
+        "primaryImage": "/xiaomiPowerbank/image1.png",
+        "stock": "out of stock",
+        "features": [
+            "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
+            "✅ كيشدو ف الشارج حتال 24 ساعة",
+            "✅ GPS خاصية  في حال توضرو ليك",
+            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
+            "✅ كيخدمو فجميع انواع الهواتف",
+            "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
+            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
+        ],
+        "images": [
+            "/airpodspro2/image3.jpeg",
+            "/airpodspro2/image1.jpeg",
+            "/airpodspro2/image4.jpeg"
+        ],
+        "rating": "5",
+        "nombreRating": "139",
+        "category": "Accessoire"
     }
-  ]
+]

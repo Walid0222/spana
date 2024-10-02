@@ -16,8 +16,18 @@ const Header = () => {
             </div>
 
             <header className="header-main">
+                <div className="cart">
+                <a href="/cart">
+                        <span className="cart-icon"><i className="fas fa-shopping-cart"></i></span>
+                    </a>
+                </div>
+                
                 <div className="logo">
-                    <h1 ><a href="/">iMarket</a></h1>
+                    <h1>
+                        <a href="/">
+                            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className="logo-image" />
+                        </a>
+                    </h1>
                 </div>
 
                 {/* Bouton menu burger pour petits écrans */}
@@ -35,12 +45,6 @@ const Header = () => {
                         <li><a href="#">اتصل بنا</a></li>
                     </ul>
                 </nav>
-
-                {/* <div className="cart">
-                    <a href="/cart">
-                        <span className="cart-icon">🛒</span> 0 MAD
-                    </a>
-                </div> */}
             </header>
 
             {/* Overlay pour le fond lorsqu'on ouvre le menu */}

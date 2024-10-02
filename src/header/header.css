@@ -7,11 +7,10 @@
     font-size: 14px;
     letter-spacing: 0.5px;
     border-bottom: 1px solid #4765c3;
-    
-  }
-  
-  /* Partie principale du header */
-  .header-main {
+}
+
+/* Partie principale du header */
+.header-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,41 +20,46 @@
     position: sticky; /* Header collant */
     top: 0;
     z-index: 1000;
-  }
-  
-  .logo h1 a{
+}
+
+.logo h1 a {
     font-size: 28px;
     color: #4765c3;
     font-weight: 700;
     letter-spacing: 1.5px;
     margin: 0;
     text-decoration: none;
-  }
-  
-  .cart a {
-    color: #4765c3;
+}
+
+.logo-image {
+    height: 40px; /* Ajustez la hauteur selon vos besoins */
+    width: auto;  /* Gardez le ratio d'aspect */
+}
+
+.cart {
+    margin-right: 20px; /* Ajustez l'espacement selon vos besoins */
+}
+
+.cart a {
+    color: #4765c3; /* Couleur du lien */
     text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
-  }
-  
-  .cart-icon {
+    font-size: 22px; /* Taille de l'icône */
+}
+
+.cart-icon {
     font-size: 22px;
-    margin-right: 10px;
-  }
-  
-  /* Menu Burger */
-  .menu-toggle {
+}
+
+/* Menu Burger */
+.menu-toggle {
     display: none; /* Cache le bouton sur les grands écrans */
     font-size: 28px;
     cursor: pointer;
     color: #4765c3;
-  }
-  
-  /* Side Drawer */
-  .side-drawer {
+}
+
+/* Side Drawer */
+.side-drawer {
     height: 100%;
     background-color: white;
     position: fixed;
@@ -65,44 +69,44 @@
     z-index: 1500;
     transition: left 0.3s ease; /* Animation fluide du menu */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .side-drawer.open {
+}
+
+.side-drawer.open {
     left: 0; /* Fait apparaître le menu à gauche */
-  }
-  
-  .side-drawer ul {
+}
+
+.side-drawer ul {
     list-style: none;
     padding: 50px 20px;
-  }
-  
-  .side-drawer ul li {
+}
+
+.side-drawer ul li {
     margin: 20px 0;
-  }
-  
-  .side-drawer ul li a {
+}
+
+.side-drawer ul li a {
     color: #4765c3;
     text-decoration: none;
     font-size: 18px;
     display: block;
-  }
-  
-  .side-drawer ul li a:hover {
+}
+
+.side-drawer ul li a:hover {
     color: #4765c3;
-  }
-  
-  /* Bouton de fermeture */
-  .close-btn {
+}
+
+/* Bouton de fermeture */
+.close-btn {
     position: absolute;
     top: 20px;
     right: 20px;
     font-size: 30px;
     cursor: pointer;
     color: #4765c3;
-  }
-  
-  /* Overlay sombre pour l'arrière-plan lorsque le menu est ouvert */
-  .backdrop {
+}
+
+/* Overlay sombre pour l'arrière-plan lorsque le menu est ouvert */
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -110,24 +114,21 @@
     height: 100%;
     z-index: 1400;
     transition: opacity 0.3s ease; /* Transition fluide */
-  }
-  
-  /* Media query pour les petits écrans */
-  @media (max-width: 768px) {
-    .logo h1 a{
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+    .logo h1 a {
         font-size: 22px;
-        
-      }
+    }
     .menu-toggle {
-      display: block; /* Affiche le bouton burger sur les petits écrans */
+        display: block; /* Affiche le bouton burger sur les petits écrans */
     }
-  
     .nav {
-      display: none;
+        display: none;
     }
-  
     .cart {
-      display: flex;
-      align-items: center;
+        display: flex;
+        align-items: center;
     }
-  }
+}

@@ -84,9 +84,8 @@ const ProductPage = () => {
                     icon: 'error',
                     confirmButtonText: 'حسناً'
                 });
-            }, 1200);
+            }, 1500);
             return;
-
         }
 
         // Ajoute la date et l'heure actuelles
@@ -128,15 +127,8 @@ const ProductPage = () => {
 
     // Fonction pour scroller vers le premier champ manquant en cas d'erreur
     const scrollToError = () => {
-        if (errors.name) {
             document.getElementById('firstForm').scrollIntoView({ behavior: 'smooth' });
-        } else if (errors.phone) {
-            document.getElementById('firstForm').scrollIntoView({ behavior: 'smooth' });
-        } else if (errors.address) {
-            document.getElementById('firstForm').scrollIntoView({ behavior: 'smooth' });
-        } else if (errors.city) {
-            document.getElementById('firstForm').scrollIntoView({ behavior: 'smooth' });
-        }
+        
     };
 
     const handleChange = (e) => {
@@ -214,14 +206,31 @@ const ProductPage = () => {
         }
     };
 
+    const handleScrollToFormAndSubmit = (e) => {
+        // Appel de la fonction de défilement
+        scrollToError();
+
+        // Soumettre le formulaire avec un délai pour le défilement
+        setTimeout(() => {
+            handleFormSubmit(e);
+        }, 300); // Ajustez le délai si nécessaire
+    };
+
     if (!product || !product.name) {
-        return <div>المنتج غير موجود.</div>;
+        return (
+            <div className="not-found-container">
+                <h2 className="not-found-message">المنتج غير موجود.</h2>
+                <p className="not-found-description">يبدو أن المنتج الذي تبحث عنه غير متوفر.</p>
+                <button className="back-to-menu-button" onClick={() => window.location.href = '/'}>
+                    العودة إلى القائمة
+                </button>
+            </div>
+        );
     }
 
     return (
         <div className="product-page">
             <div className="sidebar">
-
                 <img src={selectedImage || ''} alt="منتج" className="main-image" />
                 <div className="image-thumbnails">
                     {product.images && product.images.map((image, index) => (
@@ -235,16 +244,17 @@ const ProductPage = () => {
                     ))}
                 </div>
             </div>
-            <div id='firstForm'></div>
+            <div id='firstForm' ref={formRef}></div>
 
             <div className="product-content">
-            <p className="promotion-text">PROMO LIQUIDATION -65%</p>
+                <p className="promotion-text">PROMO LIQUIDATION -65%</p>
 
                 <h1 style={{ fontSize: '20px' }}>{product.name}  {product.name.includes("Spotify premium") && (
                     <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />
                 )}</h1>
-
-                <h1 style={{ fontSize: '16px',fontWeight: 'bold' }}>   ✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر</h1>
+                <h1 style={{ fontSize: '16px' }}>{product.bonus1} </h1>
+                <h1 style={{ fontSize: '16px' }}>{product.bonus2} </h1>
+                <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   ✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر</h1>
                 <p className="price">
                     <span className="new-price">د.م{price} </span>
                     <span className="old-price">د.م{product.oldPrice} </span>
@@ -252,9 +262,8 @@ const ProductPage = () => {
 
                 {/* Formulaire d'achat */}
                 <div id="orderForm" className="order-form" ref={formRef}>
-
                     <form onSubmit={handleFormSubmit}>
-                        <div >
+                        <div>
                             <input
                                 type="text"
                                 name="name"
@@ -312,8 +321,7 @@ const ProductPage = () => {
                                 defaultChecked
                                 onChange={handlePriceChange}
                             />
-                            <p>  واحدة ب {product.price} درهم   </p><span className="promotion-small">-50%</span>
-
+                            <p> واحدة ب {product.price} درهم </p><span className="promotion-small">-50%</span>
                         </div>
                         <div className="radio-group">
                             <input
@@ -323,17 +331,15 @@ const ProductPage = () => {
                                 value="two"
                                 onChange={handlePriceChange}
                             />
-                            <p>العرض الثاني 2 ب     {product.twoPrice} درهم </p><span className="promotion-small">-65%</span>
-
+                            <p>العرض الثاني 2 ب {product.twoPrice} درهم </p><span className="promotion-small">-65%</span>
                         </div>
 
                         <button type="submit" className="order-button">➤ للطلب إضغط هنا</button>
                     </form>
                 </div>
                 <div className="fixed-bottom-order">
-                    <button type="button" className="fixed-order-button" onClick={handleFormSubmit}>➤ للطلب إضغط هنا</button>
+                    <button type="button" className="fixed-order-button" onClick={handleScrollToFormAndSubmit}>➤ للطلب إضغط هنا</button>
                 </div>
-
 
                 {/* Compte à rebours */}
                 <div className="countdown">
@@ -349,7 +355,6 @@ const ProductPage = () => {
                         <span> ثواني</span>
                         <span> دقائق</span>
                         <span> ساعات</span>
-
                     </div>
                 </div>
 
@@ -365,7 +370,6 @@ const ProductPage = () => {
 
                 {/* Images du produit */}
                 <div className="product-images-section mobile-only">
-                    {/* <h3>صور المنتج</h3> */}
                     <div className="product-images-container">
                         {product.images && product.images.map((image, index) => (
                             <img
@@ -377,10 +381,6 @@ const ProductPage = () => {
                         ))}
                     </div>
                 </div>
-
-                {/* <div className="reviews-popup" onClick={scrollToReviews}>
-                    Voir avis des acheteurs
-                </div> */}
 
                 {/* Avis clients (mobile only) */}
                 <div className="reviews mobile-only">
