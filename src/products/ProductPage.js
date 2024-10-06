@@ -383,7 +383,29 @@ const ProductPage = () => {
                 </div>
 
                 {/* Avis clients (mobile only) */}
-                
+                <div className="reviews mobile-only">
+                    <h3>آراء العملاء</h3>
+                    <div className="reviews-container">
+                        {reviews.map((review, index) => (
+                            <div key={index} className="review">
+                                <strong>{review.name} :</strong>
+                                <p>{review.comment}</p>
+                                <img
+                                    src={review.image}
+                                    alt={`Avis de ${review.name}`}
+                                    className="review-image"
+                                    onClick={handleImageClick}
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Flèches de décoration */}
+                    <div className="arrows-decoration">
+                        <span className="left-arrow-decoration">&lt;</span>
+                        <span className="right-arrow-decoration">&gt;</span>
+                    </div>
+                </div>
             </div>
         </div>
     );
