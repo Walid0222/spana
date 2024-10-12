@@ -40,8 +40,7 @@ const ProductList = () => {
               .filter(product => product.category === category)
               .map((product, index) => (
                 <div key={index} className="product-card">
-                  <Link to={product.stock === "out of stock" ? "#" : `/product/${encodeURIComponent(product.name)}`} className={`view-details ${product.stock === "out of stock" ? "disabled-link" : ""}`}>
-                    <img src={product.primaryImage} alt={product.name} className="product-image" />
+                  <Link to={product.stock === "out of stock" ? "#" : `/product/${product.id}`} className={`view-details ${product.stock === "out of stock" ? "disabled-link" : ""}`}>                    <img src={product.primaryImage} alt={product.name} className="product-image" />
                     <h2 className="categoryCard">{category}</h2>
                     <h3 className="product-name">{product.name}</h3>
                     <p className="product-price">

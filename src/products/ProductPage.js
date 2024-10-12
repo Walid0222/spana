@@ -8,7 +8,7 @@ import { db } from '../Firebase';  // Importer la config Firebase
 import Swal from 'sweetalert2'; // Importer SweetAlert
 
 const ProductPage = () => {
-    const { productName } = useParams();
+    const { productId } = useParams(); // Get the productId from URL parameters
     const [product, setProduct] = useState(null);
     const [reviews, setReviews] = useState([]);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -127,8 +127,7 @@ const ProductPage = () => {
 
     // Fonction pour scroller vers le premier champ manquant en cas d'erreur
     const scrollToError = () => {
-            document.getElementById('firstForm').scrollIntoView({ behavior: 'smooth' });
-        
+        document.getElementById('firstForm').scrollIntoView({ behavior: 'smooth' });
     };
 
     const handleChange = (e) => {
@@ -140,7 +139,7 @@ const ProductPage = () => {
 
     useEffect(() => {
         // Trouver le produit correspondant
-        const foundProduct = productsData.find(p => p.name === decodeURIComponent(productName));
+        const foundProduct = productsData.find(p => p.id === parseInt(productId)); // Use productId
         setProduct(foundProduct || {});
         setReviews(reviewsData || []);
 
@@ -181,7 +180,7 @@ const ProductPage = () => {
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [productName]);
+    }, [productId]); // Use productId here
 
     const scrollToReviews = () => {
         const reviewsSection = document.querySelector('.reviews');
@@ -249,7 +248,7 @@ const ProductPage = () => {
             <div className="product-content">
                 <p className="promotion-text">PROMO LIQUIDATION -65%</p>
 
-                <h1 style={{ fontSize: '20px' }}>{product.name}  {product.name.includes("Spotify premium") && (
+                <h1 style={{ fontSize: '20px' }}>{product.name} {product.name.includes("Spotify premium") && (
                     <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />
                 )}</h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus1} </h1>

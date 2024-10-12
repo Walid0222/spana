@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "AirPods Pro 2ᵉ génération ( Version USA 🇺🇸 ) + Spotify premium privé GRATUIT ✅ + Pochette GRATUITE ✅",
         "price": "179 ",
         "twoPrice": "319 ",
@@ -28,6 +29,7 @@
         "category": "AirPods"
     },
     {
+        "id": 2,
         "name": "AirPods Max ( Version USA 🇺🇸 ) + Spotify premium privé GRATUIT",
         "price": "239 ",
         "twoPrice": "349 ",
@@ -46,15 +48,16 @@
             "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
         ],
         "images": [
-            "/airpodspro2/image3.jpeg",
-            "/airpodspro2/image1.jpeg",
-            "/airpodspro2/image4.jpeg"
+            "/airpodsmax/image1.png",
+            "/airpodsmax/image2.png",
+            "/airpodsmax/image3.png"
         ],
         "rating": "5",
         "nombreRating": "698",
         "category": "AirPods"
     },
     {
+        "id": 3,
         "name": "Chargeur iPhone + Cable GRATUIT : Préservez l’État de Votre Batterie ! 🔋",
         "price": "199 ",
         "twoPrice": "199 ",
@@ -73,15 +76,16 @@
             "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
         ],
         "images": [
-            "/airpodspro2/image3.jpeg",
-            "/airpodspro2/image1.jpeg",
-            "/airpodspro2/image4.jpeg"
+            "/chargeurEtCable/image1.png",
+            "/chargeurEtCable/image2.png",
+            "/chargeurEtCable/image3.png"
         ],
         "rating": "5",
         "nombreRating": "964",
         "category": "Accessoire"
     },
     {
+        "id": 4,
         "name": "Powerbank xiaomi Fast Charge 20000mAh 🔋",
         "price": "229 ",
         "twoPrice": "199 ",
@@ -100,9 +104,9 @@
             "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
         ],
         "images": [
-            "/airpodspro2/image3.jpeg",
-            "/airpodspro2/image1.jpeg",
-            "/airpodspro2/image4.jpeg"
+            "/xiaomiPowerbank/image1.png",
+            "/xiaomiPowerbank/image2.png",
+            "/xiaomiPowerbank/image3.png"
         ],
         "rating": "5",
         "nombreRating": "139",
