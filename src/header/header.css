@@ -7,6 +7,9 @@
     font-size: 14px;
     letter-spacing: 0.5px;
     border-bottom: 1px solid #4765c3;
+    font-family: 'Cairo', sans-serif; /* Utilise une police similaire */
+    font-weight: bold;
+
 }
 
 /* Partie principale du header */

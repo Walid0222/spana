@@ -72,11 +72,10 @@ const ProductPage = () => {
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
-
-        // Si le formulaire contient des erreurs, on scroll vers le premier champ avec erreur
+    
+        // Validation du formulaire
         if (!validateForm()) {
-            scrollToError();  // Appel pour scroller vers le premier champ manquant
-
+            scrollToError();  // Scroll vers le champ manquant
             setTimeout(() => {
                 Swal.fire({
                     title: 'خطأ!',
@@ -87,23 +86,33 @@ const ProductPage = () => {
             }, 1500);
             return;
         }
-
+    
         // Ajoute la date et l'heure actuelles
         const currentDateTime = new Date();
-
+    
         try {
-            // Ajouter les données du formulaire à Firestore avec un statut "pending"
+            // Sélectionne le prix et la quantité en fonction de l'option choisie
+            const selectedPrice = formData.quantity === 'one' ? product.price : product.twoPrice;
+            const quantitySelected = formData.quantity === 'one' ? 1 : 2;
+    
+            // Ajouter les données du formulaire à Firestore
             const docRef = await addDoc(collection(db, "formSubmissions"), {
                 id: nextId, // Utiliser le prochain ID généré
-                ...formData,
+                name: formData.name,
+                phone: formData.phone,
+                address: formData.address,
+                city: formData.city,
+                quantity: quantitySelected, // Enregistrer la quantité
+                productTitle: product.name, // Enregistrer le titre du produit
+                price: selectedPrice, // Enregistrer le prix selon la sélection
                 date: currentDateTime.toLocaleDateString(),
                 time: currentDateTime.toLocaleTimeString(),
                 status: 'pending' // Statut par défaut
             });
-
+    
             // Enregistrer l'ID du document dans l'état
             setDocId(docRef.id);
-
+    
             // SweetAlert pour confirmation
             Swal.fire({
                 title: '<h2 style="color: #4CAF50;">🎉 نجاح!</h2>',
@@ -131,6 +140,7 @@ const ProductPage = () => {
                     popup: 'animated tada'
                 }
             });
+    
             // Mettre à jour le prochain ID
             setNextId(nextId + 1);
         } catch (e) {

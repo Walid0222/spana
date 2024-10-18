@@ -38,24 +38,89 @@ const OrdersPage = () => {
 
     // Fonction pour confirmer une commande
     const handleConfirmOrder = async (docId) => {
-        try {
-            const orderRef = doc(db, "formSubmissions", docId);
-            await updateDoc(orderRef, {
-                status: 'confirmed',
-                confirmedBy: username // Ajouter qui a confirmé
-            });
+        Swal.fire({
+            title: 'Êtes-vous sûr ?',
+            text: "Vous êtes sur le point de confirmer cette commande. Cette action est irréversible.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Oui, confirmer',
+            cancelButtonText: 'Annuler'
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                try {
+                    const orderRef = doc(db, "formSubmissions", docId);
+                    await updateDoc(orderRef, {
+                        status: 'confirmed',
+                        confirmedBy: username // Ajouter qui a confirmé
+                    });
 
-            Swal.fire({
-                title: 'Succès!',
-                text: `Commande confirmée par : ${username}`,
-                icon: 'success',
-                confirmButtonText: 'OK'
-            });
+                    Swal.fire({
+                        title: 'Succès!',
+                        text: `La commande a été confirmée par : ${username}.`,
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
 
-            fetchOrders(); // Rafraîchir les commandes
-        } catch (error) {
-            console.error("Erreur lors de la mise à jour du statut: ", error);
-        }
+                    fetchOrders(); // Rafraîchir les commandes après confirmation
+                } catch (error) {
+                    console.error("Erreur lors de la mise à jour du statut: ", error);
+
+                    Swal.fire({
+                        title: 'Erreur!',
+                        text: `Une erreur est survenue lors de la confirmation de la commande : ${error.message}`,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            }
+        });
+    };
+
+    // Fonction pour créer le ramassage avec confirmation
+    const handlePickupCreation = async (docId) => {
+        Swal.fire({
+            title: 'Créer le ramassage?',
+            text: "Voulez-vous vraiment créer le ramassage pour cette commande?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Oui, créer',
+            cancelButtonText: 'Non, annuler',
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                try {
+                    // Mettre à jour la commande pour ajouter l'information du ramassage dans Firestore
+                    const orderRef = doc(db, "formSubmissions", docId);
+                    await updateDoc(orderRef, {
+                        pickupCreatedBy: username, // Ajouter qui a créé le ramassage
+                        pickupStatus: 'created' // Ajouter un statut pour le ramassage
+                    });
+
+                    // Afficher un message de confirmation
+                    Swal.fire({
+                        title: 'Ramassage créé!',
+                        text: `Le ramassage a été créé par : ${username}.`,
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+
+                    // Rafraîchir les commandes après la création du ramassage
+                    fetchOrders();
+                } catch (error) {
+                    console.error("Erreur lors de la création du ramassage: ", error);
+
+                    Swal.fire({
+                        title: 'Erreur!',
+                        text: `Une erreur est survenue lors de la création du ramassage : ${error.message}`,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            }
+        });
     };
 
     // Fonction pour annuler une commande avec une raison
@@ -98,7 +163,7 @@ const OrdersPage = () => {
     const showCancelReason = (cancelReason, cancelledBy) => {
         Swal.fire({
             title: 'Raison de l\'annulation',
-            text: `${cancelReason ? cancelReason : 'Aucune raison fournie'}\n `,
+            text: `${cancelReason ? cancelReason : 'Aucune raison fournie'}\n Annulée par: ${cancelledBy}`,
             icon: 'info',
             confirmButtonText: 'OK'
         });
@@ -110,7 +175,7 @@ const OrdersPage = () => {
 
     return (
         <div className="orders-page">
-            <h1>Liste des commandes</h1>
+            <h1></h1>
             {orders.length === 0 ? (
                 <p>Aucune commande trouvée.</p>
             ) : (
@@ -119,6 +184,7 @@ const OrdersPage = () => {
                         <tr>
                             <th>ID</th>
                             <th>Nom</th>
+                            
                             <th>Heure d'achat</th>
                             <th>Status</th>
                         </tr>
@@ -129,6 +195,7 @@ const OrdersPage = () => {
                                 <tr onClick={() => toggleDetails(order.docId)} className="main-row">
                                     <td>{order.id}</td>
                                     <td>{order.name}</td>
+                                    
                                     <td>{order.time}</td>
                                     <td className={order.status === 'confirmed' ? 'status-green' : order.status === 'cancelled' ? 'status-red' : 'status-pending'}>
                                         {order.status === 'confirmed' ? `Confirmée par ${order.confirmedBy}` : order.status === 'cancelled' ? `Annulée par ${order.cancelledBy}` : 'En attente'}
@@ -137,7 +204,7 @@ const OrdersPage = () => {
 
                                 {expandedOrder === order.docId && (
                                     <tr className="details-row">
-                                        <td colSpan="4">
+                                        <td colSpan="7">
                                             <div className="details">
                                                 <p><strong>ID :</strong> {order.id} </p>
                                                 <p><strong>Date d'achat :</strong> {order.date} </p>
@@ -145,6 +212,9 @@ const OrdersPage = () => {
                                                 <p><strong>Téléphone :</strong> {order.phone}</p>
                                                 <p><strong>Adresse :</strong> {order.address}</p>
                                                 <p><strong>Ville :</strong> {order.city}</p>
+                                                <p><strong>Produit :</strong> {order.productTitle}</p>
+                                                <p><strong>Quantité :</strong> {order.quantity}</p>
+                                                <p><strong>Prix :</strong> {order.price} درهم</p>
 
                                                 <div className="details-actions">
                                                     {order.status === 'pending' && (
@@ -163,7 +233,16 @@ const OrdersPage = () => {
                                                         </button>
                                                     )}
                                                     {order.status === 'confirmed' && (
-                                                        <p className="status-confirmed">Cette commande a été confirmée par {order.confirmedBy}.</p>
+                                                        <>
+                                                            <p className="status-confirmed">Cette commande a été confirmée par {order.confirmedBy}.</p>
+                                                            {order.pickupStatus !== 'created' ? (
+                                                                <button onClick={() => handlePickupCreation(order.docId)} className="button-pickup">
+                                                                    Créer Ramassage
+                                                                </button>
+                                                            ) : (
+                                                                <p className="status-pickup">Ramassage créé par {order.pickupCreatedBy}</p>
+                                                            )}
+                                                        </>
                                                     )}
                                                 </div>
                                             </div>
