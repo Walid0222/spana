@@ -29,7 +29,7 @@ const ProductList = () => {
     <div className="product-section">
       <div className="bannerPromo">
         <img src={`${process.env.PUBLIC_URL}/banner.png`} alt="Promotion -65%" className="banner-image" />
-        <p className="promotion-text">Liquidation : -65%</p>
+        <p className="promotion-text">PROMOTION : -65%</p>
       </div>
 
       {categories.map((category, categoryIndex) => (

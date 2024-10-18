@@ -1,0 +1,121 @@
+.orders-page {
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.orders-table th, .orders-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.orders-table th {
+    background-color: #4765c3;
+    color: white;
+    font-weight: bold;
+}
+
+.orders-table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Statut */
+.status-green {
+    color: green;
+    font-weight: bold;
+}
+
+.status-red {
+    color: red;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Détails */
+.details {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.details-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Boutons */
+button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-confirm {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button-cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.button-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.status-confirmed {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .orders-table th, .orders-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .button-confirm, .button-cancel, .button-info {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .details {
+        font-size: 14px;
+    }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -16,10 +17,16 @@ const Header = () => {
             </div>
 
             <header className="header-main">
-                <div className="cart">
-                <a href="/cart">
+                <div className="cart-login">
+                <Link to="/login">
+                        {/* Icône de connexion */}
+                        <span className="login-icon"><i className="fas fa-user"></i></span>
+                    </Link>
+                    <Link to="">
+                        {/* Icône de panier */}
                         <span className="cart-icon"><i className="fas fa-shopping-cart"></i></span>
-                    </a>
+                    </Link>
+                    
                 </div>
                 
                 <div className="logo">
@@ -43,7 +50,7 @@ const Header = () => {
                         <li><a href="#">الرئيسية</a></li>
                         <li><a href="#">المجموعات</a></li>
                         <li><a href="#">اتصل بنا</a></li>
-                    </ul>
+                        </ul>
                 </nav>
             </header>
 

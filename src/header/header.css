@@ -45,9 +45,28 @@
     text-decoration: none;
     font-size: 22px; /* Taille de l'icône */
 }
+.cart-login {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espace entre les icônes */
+}
 
+/* Style pour l'icône de connexion */
+.login-icon {
+    font-size: 22px;
+    color: #4765c3;
+    cursor: pointer;
+}
+
+/* Style pour l'icône de panier */
 .cart-icon {
     font-size: 22px;
+    color: #4765c3;
+    cursor: pointer;
+}
+
+.cart-login a {
+    text-decoration: none;
 }
 
 /* Menu Burger */

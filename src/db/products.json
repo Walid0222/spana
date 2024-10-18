@@ -8,6 +8,8 @@
         "bonus1": "✅ سبوتيفاي خاص مجاني ",
         "bonus2": "✅ حافظة ايربودز مجانية ",
         "bonus3": "✅ حافظة ايربودز مجانية ",
+        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر",
+
         "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
         "primaryImage": "/airpodspro2/image3.jpeg",
         "features": [
@@ -25,8 +27,34 @@
             "/airpodspro2/image4.jpeg"
         ],
         "rating": "5",
-        "nombreRating": "1365",
+        "nombreRating": "463",
         "category": "AirPods"
+    }
+    ,
+    {
+        "id": 5,
+        "name": "Apple Watch Ultra 2 ( Version USA 🇺🇸 )",
+        "price": "379",
+        "twoPrice": "719",
+        "oldPrice": "889",
+        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 6 أشهر",
+        "description": "L'Apple Watch Ultra 2 est une montre extrêmement robuste conçue pour les aventuriers et les athlètes. Fabriquée en aluminium léger, elle offre une durabilité et une résistance exceptionnelles, tout en étant confortable à porter. Cette montre combine résistance à l'eau jusqu'à 100 mètres et des capteurs avancés pour surveiller la santé et la performance sportive. Avec son écran toujours allumé, une batterie améliorée et un GPS ultra précis, elle est idéale pour les conditions les plus difficiles.",
+        "primaryImage": "/applewatchultra2/image1.png",
+        "features": [
+            "💥 شاشة كتخدم ديما بسطوع حتى 2000 شمعة، باش تكون عندك الرؤية واضحة فأي ظروف.",
+            "✅ كاينة فيها أجهزة استشعار متطورة: تخطيط القلب (ECG)، وقياس نسبة الأوكسجين ف الدم (SpO2)، وتتبع النوم.",
+            "✅ متوافقة مع جميع تليفونات iPhone و Android.",
+            "✅ مصنوعة من الألومنيوم باش تكون متينة.",
+            "✅ كاين فيها الاتصال الخلوي باش تقدر تستعملها بلا ما تحتاج تليفون."
+        ],
+        "images": [
+            "/applewatchultra2/image1.png",
+            "/applewatchultra2/image2.png",
+            "/applewatchultra2/image3.png"
+        ],
+        "rating": "5",
+        "nombreRating": "256",
+        "category": "Apple Watch"
     },
     {
         "id": 2,
@@ -35,6 +63,8 @@
         "twoPrice": "349 ",
         "oldPrice": "679 ",
         "bonus": "Avec Spotify Gratuit",
+        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر",
+
         "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
         "primaryImage": "/airpodsmax/image1.png",
         "stock": "out of stock",
@@ -53,7 +83,7 @@
             "/airpodsmax/image3.png"
         ],
         "rating": "5",
-        "nombreRating": "698",
+        "nombreRating": "221",
         "category": "AirPods"
     },
     {
@@ -63,6 +93,8 @@
         "twoPrice": "199 ",
         "oldPrice": "589 ",
         "bonus": "Avec câble Gratuit",
+        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر",
+
         "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
         "primaryImage": "/chargeurEtCable/image1.png",
         "stock": "out of stock",
@@ -81,7 +113,7 @@
             "/chargeurEtCable/image3.png"
         ],
         "rating": "5",
-        "nombreRating": "964",
+        "nombreRating": "564",
         "category": "Accessoire"
     },
     {
@@ -91,6 +123,8 @@
         "twoPrice": "199 ",
         "oldPrice": "400 ",
         "bonus": "",
+        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر",
+
         "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
         "primaryImage": "/xiaomiPowerbank/image1.png",
         "stock": "out of stock",
@@ -100,7 +134,6 @@
             "✅ GPS خاصية  في حال توضرو ليك",
             "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
             "✅ كيخدمو فجميع انواع الهواتف",
-            "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
             "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
         ],
         "images": [

@@ -106,12 +106,31 @@ const ProductPage = () => {
 
             // SweetAlert pour confirmation
             Swal.fire({
-                title: 'نجاح!',
-                text: `تم تقديم النموذج بنجاح. الرقم التعريفي: ${nextId}`,
+                title: '<h2 style="color: #4CAF50;">🎉 نجاح!</h2>',
+                html: `
+                    <p style="font-size: 18px; color: #333;">
+                        تم تقديم النموذج بنجاح.<br> 
+                        <strong>الرقم التعريفي:</strong> ${nextId}<br>
+                        سنقوم بالاتصال بك في غضون لحظات لتأكيد الشراء وشحن الطرد الخاص بك. 
+                        يرجى الاحتفاظ بهاتفك بالقرب منك.
+                    </p>
+                    <p style="font-size: 16px; color: #FF9800;">
+                        📞 رجاءً، تأكد من أن هاتفك جاهز.
+                    </p>
+                `,
                 icon: 'success',
-                confirmButtonText: 'حسناً'
+                confirmButtonText: '<span style="font-size: 18px;">👌 حسناً</span>',
+                background: '#f9f9f9',
+                backdrop: `
+                    rgba(0, 123, 255, 0.4)
+                    url("/images/celebration.gif")
+                    left top
+                    no-repeat
+                `,
+                customClass: {
+                    popup: 'animated tada'
+                }
             });
-
             // Mettre à jour le prochain ID
             setNextId(nextId + 1);
         } catch (e) {
@@ -246,14 +265,14 @@ const ProductPage = () => {
             <div id='firstForm' ref={formRef}></div>
 
             <div className="product-content">
-                <p className="promotion-text">PROMO LIQUIDATION -65%</p>
+                <p className="promotion-text">PROMOTION -65%</p>
 
                 <h1 style={{ fontSize: '20px' }}>{product.name} {product.name.includes("Spotify premium") && (
                     <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />
                 )}</h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus1} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus2} </h1>
-                <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   ✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر</h1>
+                <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   {product.infos}</h1>
                 <p className="price">
                     <span className="new-price">د.م{price} </span>
                     <span className="old-price">د.م{product.oldPrice} </span>
@@ -382,7 +401,7 @@ const ProductPage = () => {
                 </div>
 
                 {/* Avis clients (mobile only) */}
-                <div className="reviews mobile-only">
+                {/*<div className="reviews mobile-only">
                     <h3>آراء العملاء</h3>
                     <div className="reviews-container">
                         {reviews.map((review, index) => (
@@ -399,12 +418,11 @@ const ProductPage = () => {
                         ))}
                     </div>
 
-                    {/* Flèches de décoration */}
                     <div className="arrows-decoration">
                         <span className="left-arrow-decoration">&lt;</span>
                         <span className="right-arrow-decoration">&gt;</span>
                     </div>
-                </div>
+                </div>*/}
             </div>
         </div>
     );

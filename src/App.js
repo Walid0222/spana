@@ -1,12 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './header/header';
 import ProductList from './products/ProductList';
 import ProductPage from './products/ProductPage';
+import OrdersPage from './orders/OrdersPage';
 import Footer from './footer/footer';
 import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Login from './components/Login'; // La page de connexion
+import ProtectedRoute from './components/ProtectedRoute'; // La route protégée
+
 
 function AppContent() {
+  const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem('auth') === 'true');
+
   const location = useLocation();
 
   useEffect(() => {
@@ -23,13 +30,34 @@ function AppContent() {
   }, []);
 
   return (
+    
     <div className="App">
       <Header />
       <Routes>
+        <Route path="/login" element={<Login onLogin={setIsAuthenticated} />} />
+
+        {/* Route protégée */}
+        <Route
+          path="/OrdersPage"
+          element={
+            <ProtectedRoute>
+              <OrdersPage />
+            </ProtectedRoute>
+          }
+        />
+      
         <Route path="/" element={<ProductList />} />
         <Route path="/product/:productId" element={<ProductPage />} />
       </Routes>
       <Footer />
+      <a
+        href="https://wa.me/+212678811463" // Remplace avec ton numéro de téléphone
+        className="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-whatsapp whatsapp-icon"></i>
+      </a>
     </div>
   );
 }
