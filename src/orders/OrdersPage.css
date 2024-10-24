@@ -144,7 +144,7 @@ h1 {
 @media screen and (max-width: 768px) {
     .modal {
         width: 95%;
-        padding: 15px;
+        padding: 14px;
     }
 
     .orders-table th, .orders-table td {
