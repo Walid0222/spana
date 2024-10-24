@@ -24,6 +24,7 @@ h1 {
     text-align: left;
     font-family: 'Arial', sans-serif;
     font-size: 14px;
+        font-weight: bold;
 }
 
 .orders-table th {
@@ -74,48 +75,110 @@ h1 {
     gap: 10px;
 }
 
-/* Boutons */
-button {
-    padding: 8px 12px;
-    margin-right: 5px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-.button-confirm {
-    background-color: #4CAF50;
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal h2 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+}
+
+.modal label {
+    display: block;
+    margin: 10px 0 5px 0;
+}
+
+.modal input[type="text"], .modal select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-add-parcel, .button-cancel {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-add-parcel {
+    background-color: #4765c3;
     color: white;
 }
 
 .button-cancel {
+    margin: 3px;
+
     background-color: #f44336;
     color: white;
 }
 
-.button-info {
-    background-color: #17a2b8;
-    color: white;
-}
-
-.status-confirmed {
-    color: #4CAF50;
-    font-weight: bold;
-}
-
 /* Responsive design */
 @media screen and (max-width: 768px) {
-    .orders-table th, .orders-table td {
-        padding: 8px;
-        font-size: 12px;
+    .modal {
+        width: 95%;
+        padding: 15px;
     }
 
-    .button-confirm, .button-cancel, .button-info {
-        padding: 6px 8px;
-        font-size: 12px;
+    .orders-table th, .orders-table td {
+        padding: 8px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .button-add-parcel, .button-cancel {
+        padding: 8px 12px;
     }
 
     .details {
         font-size: 14px;
     }
+}
+.button-confirm {
+    margin: 3px;
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: white; /* Couleur du texte en blanc */
+    padding: 10px 15px; /* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de pointeur au survol */
+    font-size: 14px; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+.button-confirm:hover {
+    background-color: #45a049; /* Couleur plus foncée au survol */
+}
+.button.info{
+    text-decoration: none;
+}
+.button-confirm:active {
+    background-color: #388e3c; /* Couleur encore plus foncée lorsque le bouton est cliqué */
 }
