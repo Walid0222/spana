@@ -56,6 +56,32 @@
         "nombreRating": "256",
         "category": "Apple Watch"
     },
+    
+    {
+        "id": 6,
+        "name": "Smart Watch Series 9 ( Super Amoled )",
+        "price": "199",
+        "twoPrice": "359",
+        "oldPrice": "599",
+        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 6 أشهر",
+        "description": "Smart watch series 9 est une montre extrêmement robuste conçue pour les aventuriers et les athlètes. Fabriquée en aluminium léger, elle offre une durabilité et une résistance exceptionnelles, tout en étant confortable à porter. Cette montre combine résistance à l'eau jusqu'à 100 mètres et des capteurs avancés pour surveiller la santé et la performance sportive. Avec son écran toujours allumé, une batterie améliorée et un GPS ultra précis, elle est idéale pour les conditions les plus difficiles.",
+        "primaryImage": "/smartwatchtsport/image1.png",
+        "features": [
+            "💥 شاشة كتخدم ديما بسطوع حتى 2000 شمعة، باش تكون عندك الرؤية واضحة فأي ظروف.",
+            "✅ كاينة فيها أجهزة استشعار متطورة: تخطيط القلب (ECG)، وقياس نسبة الأوكسجين ف الدم (SpO2)، وتتبع النوم.",
+            "✅ متوافقة مع جميع تليفونات iPhone و Android.",
+            "✅ مصنوعة من الألومنيوم باش تكون متينة.",
+            "✅ كاين فيها الاتصال الخلوي باش تقدر تستعملها بلا ما تحتاج تليفون."
+        ],
+        "images": [
+            "/smartwatchtsport/image1.png",
+            "/smartwatchtsport/image2.png",
+            "/smartwatchtsport/image3.png"
+        ],
+        "rating": "5",
+        "nombreRating": "221",
+        "category": "Smart Watch"
+    },
     {
         "id": 2,
         "name": "AirPods Max ( Version USA 🇺🇸 ) + Spotify premium privé GRATUIT",
