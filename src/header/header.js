@@ -12,13 +12,13 @@ const Header = () => {
     return (
         <>
             <div className="header-top">
-                <p style={{ fontSize: '15px', fontWeight: 'bold' }}>✨ عرض خاص: التوصيل بالمجان و الدفع عند الاستلام 🚚</p>
-                <p style={{ fontWeight: 'bold', fontSize: '17px' }}> سارع واطلب الآن ⏰</p>
-            </div>
+                <p style={{ fontSize: '15px' }}>
+                    Livraison <span style={{ fontWeight: 'bold' }}>Gratuite</span> & <span style={{ fontWeight: 'bold' }}>Garantie Offerte</span>
+                </p>            </div>
 
             <header className="header-main">
                 <div className="cart-login">
-                <Link to="/login">
+                    <Link to="/login">
                         {/* Icône de connexion */}
                         <span className="login-icon"><i className="fas fa-user"></i></span>
                     </Link>
@@ -26,9 +26,9 @@ const Header = () => {
                         {/* Icône de panier */}
                         <span className="cart-icon"><i className="fas fa-shopping-cart"></i></span>
                     </Link>
-                    
+
                 </div>
-                
+
                 <div className="logo">
                     <h1>
                         <a href="/">
@@ -47,10 +47,9 @@ const Header = () => {
                         &times;
                     </div>
                     <ul>
-                        <li><a href="#">الرئيسية</a></li>
-                        <li><a href="#">المجموعات</a></li>
-                        <li><a href="#">اتصل بنا</a></li>
-                        </ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#"> Contactez-nous</a></li>
+                    </ul>
                 </nav>
             </header>
 

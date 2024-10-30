@@ -1,14 +1,13 @@
 /* Partie supérieure du header avec l'information de livraison */
 .header-top {
-    background-color: #4765c3;
+    background-color: #1a1b20;
     color: white;
     text-align: center;
     padding: 1px 0;
     font-size: 14px;
     letter-spacing: 0.5px;
-    border-bottom: 1px solid #4765c3;
+    border-bottom: 1px solid #1a1b20;
     font-family: 'Cairo', sans-serif; /* Utilise une police similaire */
-    font-weight: bold;
 
 }
 
@@ -27,7 +26,7 @@
 
 .logo h1 a {
     font-size: 28px;
-    color: #4765c3;
+    color: #292b32;
     font-weight: 700;
     letter-spacing: 1.5px;
     margin: 0;
@@ -35,8 +34,8 @@
 }
 
 .logo-image {
-    height: 40px; /* Ajustez la hauteur selon vos besoins */
-    width: auto;  /* Gardez le ratio d'aspect */
+    height: auto; /* Ajustez la hauteur selon vos besoins */
+    width: 120px;  /* Gardez le ratio d'aspect */
 }
 
 .cart {
@@ -44,7 +43,7 @@
 }
 
 .cart a {
-    color: #4765c3; /* Couleur du lien */
+    color: #292b32; /* Couleur du lien */
     text-decoration: none;
     font-size: 22px; /* Taille de l'icône */
 }
@@ -57,14 +56,14 @@
 /* Style pour l'icône de connexion */
 .login-icon {
     font-size: 22px;
-    color: #4765c3;
+    color: #292b32;
     cursor: pointer;
 }
 
 /* Style pour l'icône de panier */
 .cart-icon {
     font-size: 22px;
-    color: #4765c3;
+    color: #292b32;
     cursor: pointer;
 }
 
@@ -77,7 +76,7 @@
     display: none; /* Cache le bouton sur les grands écrans */
     font-size: 28px;
     cursor: pointer;
-    color: #4765c3;
+    color: #292b32;
 }
 
 /* Side Drawer */
@@ -107,14 +106,14 @@
 }
 
 .side-drawer ul li a {
-    color: #4765c3;
+    color: #292b32;
     text-decoration: none;
     font-size: 18px;
     display: block;
 }
 
 .side-drawer ul li a:hover {
-    color: #4765c3;
+    color: #292b32;
 }
 
 /* Bouton de fermeture */
@@ -124,7 +123,7 @@
     right: 20px;
     font-size: 30px;
     cursor: pointer;
-    color: #4765c3;
+    color: #292b32;
 }
 
 /* Overlay sombre pour l'arrière-plan lorsque le menu est ouvert */

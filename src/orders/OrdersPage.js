@@ -3,6 +3,7 @@ import { collection, getDocs, query, orderBy, updateDoc, doc } from "firebase/fi
 import { db } from '../Firebase'; // Importer Firestore
 import Swal from 'sweetalert2'; // Importer SweetAlert
 import './OrdersPage.css'; // Importer les styles
+import villes from '../db/villes.json';
 
 const OrdersPage = () => {
     const [orders, setOrders] = useState([]); // État pour stocker les commandes
@@ -30,7 +31,7 @@ const OrdersPage = () => {
     const [filteredSelectedDistricts, setFilteredSelectedDistricts] = useState([]);
 
     // Fonction pour récupérer tous les districts depuis l'API
-    const fetchDistricts = async () => {
+    /* const fetchDistricts = async () => {
         const token = localStorage.getItem('token'); // Récupérer le token stocké
         try {
             let allDistricts = [];
@@ -71,7 +72,7 @@ const OrdersPage = () => {
         } catch (error) {
             console.error('Erreur lors de la récupération des districts :', error);
         }
-    };
+    }; */
 
     const fetchOrders = async () => {
         try {
@@ -91,8 +92,10 @@ const OrdersPage = () => {
     };
 
     useEffect(() => {
+            setDistricts(villes); // Charger les districts à partir de villes.json
+            setFilteredPickupDistricts(villes); // Initialisez avec tous les districts
+            setFilteredSelectedDistricts(villes); // Initialisez avec tous les districts
         fetchOrders();
-        fetchDistricts();
     }, []);
 
     // Fonction pour afficher les détails de la commande
@@ -132,7 +135,7 @@ const OrdersPage = () => {
             pickup_district_id: pickupDistrictId,
             district_id: selectedDistrictId,
             name: selectedOrder.name,
-            amount: selectedOrder.price,
+            amount: Number(selectedOrder.price) + 1,
             address: selectedOrder.address,
             phone: selectedOrder.phone,
             products: selectedOrder.productTitle,
@@ -279,7 +282,7 @@ const OrdersPage = () => {
 
     return (
         <div className="orders-page">
-            {orders.length === 0 ? (
+           {orders.length === 0 ? (
                 <p>Aucune commande trouvée.</p>
             ) : (
                 <table className="orders-table">
@@ -388,7 +391,7 @@ const OrdersPage = () => {
                             value={pickupDistrictId}
                             onChange={(e) => setPickupDistrictId(Number(e.target.value))}
                         >
-                            <option value="">Chargement des villes</option>
+                            <option value="">Appuie ici pour choisir la ville </option>
                             {filteredPickupDistricts.map(district => (
                                 <option key={district.id} value={district.id}>
                                     {district.name}
@@ -410,7 +413,7 @@ const OrdersPage = () => {
                             value={selectedDistrictId}
                             onChange={(e) => setSelectedDistrictId(Number(e.target.value))}
                         >
-                            <option value="">Chargement des villes</option>
+                            <option value="">Appuie ici pour choisir la ville</option>
                             {filteredSelectedDistricts.map(district => (
                                 <option key={district.id} value={district.id}>
                                     {district.name}

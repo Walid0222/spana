@@ -1,0 +1,41 @@
+/* src/components/BannerPromo.css */
+.banner-promo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+      url('/public/banner-image.jpg'); /* Assurez-vous que l'image est placée dans le dossier public */
+    background-size: cover;
+    background-position: center;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre subtile pour plus de profondeur */
+}
+
+.banner-text {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+    line-height: 1.4; /* Espacement entre les lignes */
+}
+
+/* Effet de surbrillance au survol */
+.banner-promo:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Accentuer l'ombre au survol */
+    transform: scale(1.02); /* Agrandissement léger */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner-text {
+      font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text {
+      font-size: 18px;
+    }
+}

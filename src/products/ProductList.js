@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './ProductList.css';
 import { Link } from 'react-router-dom';
 import productsData from '../db/products.json';
+import BannerPromo from './BannerPromo';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -27,9 +28,10 @@ const ProductList = () => {
 
   return (
     <div className="product-section">
+            <BannerPromo />
+
       <div className="bannerPromo">
-        <img src={`${process.env.PUBLIC_URL}/banner.png`} alt="Promotion -65%" className="banner-image" />
-        <p className="promotion-text">PROMOTION : -65%</p>
+        <p className="promotion-text">PROMOTION : -57%</p>
       </div>
 
       {categories.map((category, categoryIndex) => (
