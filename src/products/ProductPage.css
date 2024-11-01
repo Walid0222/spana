@@ -143,7 +143,7 @@
     color: white;
     border: none;
     padding: 12px 20px;
-    font-size: 18px;
+    font-size: 22px;
     cursor: pointer;
     border-radius: 5px;
     width: 100%;
@@ -151,6 +151,7 @@
     overflow: hidden;
     transition: background-color 0.3s ease, transform 0.3s ease;
     animation: pulse 4s infinite;
+font-weight: bold;
 }
 
 @keyframes pulse {
@@ -484,7 +485,7 @@
     color: white;
     border: none;
     padding: 12px 20px;
-    font-size: 18px;
+    font-size: 22px;
     cursor: pointer;
     border-radius: 5px;
     width: 100%;
@@ -492,6 +493,7 @@
     overflow: hidden;
     transition: background-color 0.3s ease, transform 0.3s ease;
     animation: pulse 4s infinite;
+    font-weight: bold;
 }
 
 .fixed-order-button:hover {

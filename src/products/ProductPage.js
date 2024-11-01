@@ -72,7 +72,7 @@ const ProductPage = () => {
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
-    
+
         // Validation du formulaire
         if (!validateForm()) {
             scrollToError();  // Scroll vers le champ manquant
@@ -83,18 +83,18 @@ const ProductPage = () => {
                     icon: 'error',
                     confirmButtonText: 'حسناً'
                 });
-            }, 1500);
+            }, 1200);
             return;
         }
-    
+
         // Ajoute la date et l'heure actuelles
         const currentDateTime = new Date();
-    
+
         try {
             // Sélectionne le prix et la quantité en fonction de l'option choisie
             const selectedPrice = formData.quantity === 'one' ? product.price : product.twoPrice;
             const quantitySelected = formData.quantity === 'one' ? 1 : 2;
-    
+
             // Ajouter les données du formulaire à Firestore
             const docRef = await addDoc(collection(db, "formSubmissions"), {
                 id: nextId, // Utiliser le prochain ID généré
@@ -109,10 +109,10 @@ const ProductPage = () => {
                 time: currentDateTime.toLocaleTimeString(),
                 status: 'pending' // Statut par défaut
             });
-    
+
             // Enregistrer l'ID du document dans l'état
             setDocId(docRef.id);
-    
+
             // SweetAlert pour confirmation
             Swal.fire({
                 title: '<h2 style="color: #4CAF50;">🎉 نجاح!</h2>',
@@ -140,7 +140,7 @@ const ProductPage = () => {
                     popup: 'animated tada'
                 }
             });
-    
+
             // Mettre à jour le prochain ID
             setNextId(nextId + 1);
         } catch (e) {
@@ -275,14 +275,23 @@ const ProductPage = () => {
             <div id='firstForm' ref={formRef}></div>
 
             <div className="product-content">
-                <p className="promotion-text">PROMOTION -65%</p>
+                <p className="promotion-text">PROMOTION -57%</p>
 
                 <h1 style={{ fontSize: '20px' }}>{product.name} {product.name.includes("Spotify premium") && (
                     <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />
                 )}</h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus1} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus2} </h1>
-                <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   {product.infos}</h1>
+                <h1 style={{ fontSize: '16px' }}>{product.bonus1_ar} </h1>
+                <h1 style={{ fontSize: '16px' }}>{product.bonus2_ar} </h1>
+                <h1 style={{ fontSize: '16px' }}>{product.bonus3_ar} </h1>
+                <h1 style={{ fontSize: '16px' }}>{product.bonus4_ar} </h1>
+                <h3> ⚠️ راه كاين تخفيض مؤقت ⚠️                </h3>
+                <ul style={{    listStyleType:'none'}}>
+                    {product.description && product.description.map((description, index) => (
+                        <li key={index}>{description}</li>
+                    ))}
+                </ul>                <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   {product.infos}</h1>
                 <p className="price">
                     <span className="new-price">د.م{price} </span>
                     <span className="old-price">د.م{product.oldPrice} </span>
@@ -307,7 +316,7 @@ const ProductPage = () => {
                             <input
                                 type="text"
                                 name="phone"
-                                placeholder="رقم الهاتف"
+                                placeholder="06XXXXXXXX رقم الهاتف"
                                 value={formData.phone}
                                 onChange={handleChange}
                                 ref={phoneRef}
@@ -359,14 +368,14 @@ const ProductPage = () => {
                                 value="two"
                                 onChange={handlePriceChange}
                             />
-                            <p>العرض الثاني 2 ب {product.twoPrice} درهم </p><span className="promotion-small">-65%</span>
+                            <p>العرض الثاني 2 ب {product.twoPrice} درهم </p><span className="promotion-small">-57%</span>
                         </div>
 
-                        <button type="submit" className="order-button">➤ للطلب إضغط هنا</button>
+                        <button type="submit" className="order-button">➤  اشتري الآن وادفع لاحقا</button>
                     </form>
                 </div>
                 <div className="fixed-bottom-order">
-                    <button type="button" className="fixed-order-button" onClick={handleScrollToFormAndSubmit}>➤ للطلب إضغط هنا</button>
+                    <button type="button" className="fixed-order-button" onClick={handleScrollToFormAndSubmit}>➤   اشتري الآن وادفع لاحقا</button>
                 </div>
 
                 {/* Compte à rebours */}
