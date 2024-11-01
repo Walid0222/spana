@@ -272,7 +272,6 @@ const ProductPage = () => {
                     ))}
                 </div>
             </div>
-            <div id='firstForm' ref={formRef}></div>
 
             <div className="product-content">
                 <p className="promotion-text">PROMOTION -57%</p>
@@ -287,11 +286,15 @@ const ProductPage = () => {
                 <h1 style={{ fontSize: '16px' }}>{product.bonus3_ar} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus4_ar} </h1>
                 <h3> ⚠️ راه كاين تخفيض مؤقت ⚠️                </h3>
-                <ul style={{    listStyleType:'none'}}>
+                <ul style={{ listStyleType: 'none' }}>
                     {product.description && product.description.map((description, index) => (
                         <li key={index}>{description}</li>
                     ))}
-                </ul>                <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   {product.infos}</h1>
+                </ul>
+                <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   {product.infos}</h1>
+
+                <div id='firstForm' ref={formRef}></div>
+
                 <p className="price">
                     <span className="new-price">د.م{price} </span>
                     <span className="old-price">د.م{product.oldPrice} </span>
