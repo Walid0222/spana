@@ -1,6 +1,6 @@
 /* Section des produits */
 .product-section {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;  /* Centrer la section dans la page */
 }
 /* Titre de chaque catégorie */
@@ -21,7 +21,7 @@
 }
 /* Grille des produits */
 .product-grid {
-  
+  margin: 30px;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Quatre colonnes pour PC */
   gap: 20px;
