@@ -576,3 +576,64 @@ font-weight: bold;
 .back-to-menu-button:hover {
     background-color: #4765c3; /* Couleur du bouton au survol */
 }
+/* Container for optional color selection */
+.color-selection {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style each color option as a square */
+.color-option {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px; /* Square shape with rounded corners */
+    border: 2px solid transparent; /* Default border */
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Hover effect for each color option */
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+/* Highlight the selected color square */
+.color-option.selected {
+    border: 2px solid #4765c3; /* Highlight selected option */
+    box-shadow: 0 0 5px rgba(71, 101, 195, 0.7);
+}
+
+/* Container for displaying the selected color */
+/* Container for displaying the selected color */
+.selected-color-display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    margin-top: 10px;
+}
+.selected-color-display p {
+    margin-left: 10px;
+}
+/* Square displaying the selected color */
+.selected-color-square {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px; /* Rounded corners for the square */
+    margin-left: 8px;
+}
+
+.bonus-image {
+    width: 50%;
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .bonus-image {
+        width: 50%;
+    }
+}

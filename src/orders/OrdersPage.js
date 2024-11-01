@@ -359,6 +359,7 @@ const OrdersPage = () => {
                             <p><strong>Adresse :</strong> {order.address}</p>
                             <p><strong>Ville :</strong> {order.city}</p>
                             <p><strong>Produit :</strong> {order.productTitle}</p>
+                            <p><strong>Couleur :</strong> {order.color}</p>
                             <p><strong>Quantité :</strong> {order.quantity}</p>
                             <p><strong>Prix :</strong> {order.price} درهم</p>
                         </div>

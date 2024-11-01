@@ -8,6 +8,12 @@ import { db } from '../Firebase';  // Importer la config Firebase
 import Swal from 'sweetalert2'; // Importer SweetAlert
 
 const ProductPage = () => {
+    const [selectedColor, setSelectedColor] = useState('');
+    const airpodsMaxColors = [
+       
+        { name: 'أخضر', hex: '#28a745' }, // Green
+        { name: 'أسود', hex: '#333333' }  // Black
+    ];
     const { productId } = useParams(); // Get the productId from URL parameters
     const [product, setProduct] = useState(null);
     const [reviews, setReviews] = useState([]);
@@ -104,6 +110,7 @@ const ProductPage = () => {
                 city: formData.city,
                 quantity: quantitySelected, // Enregistrer la quantité
                 productTitle: product.name, // Enregistrer le titre du produit
+                color: selectedColor,  // Save the selected color
                 price: selectedPrice, // Enregistrer le prix selon la sélection
                 date: currentDateTime.toLocaleDateString(),
                 time: currentDateTime.toLocaleTimeString(),
@@ -285,6 +292,7 @@ const ProductPage = () => {
                 <h1 style={{ fontSize: '16px' }}>{product.bonus2_ar} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus3_ar} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus4_ar} </h1>
+                <img src={product.bonusImage} alt={product.name} className="bonus-image" />
                 <h3> ⚠️ راه كاين تخفيض مؤقت ⚠️                </h3>
                 <ul style={{ listStyleType: 'none' }}>
                     {product.description && product.description.map((description, index) => (
@@ -373,7 +381,33 @@ const ProductPage = () => {
                             />
                             <p>العرض الثاني 2 ب {product.twoPrice} درهم </p><span className="promotion-small">-57%</span>
                         </div>
+                        {product.color === 1 && (
+                                    <div className="color-selection">
+                                        {airpodsMaxColors.map((color) => (
+                                            <div
+                                                key={color.name}
+                                                className={`color-option ${selectedColor === color.name ? 'selected' : ''}`}
+                                                style={{ backgroundColor: color.hex }} // Set background color
+                                                onClick={() => setSelectedColor(selectedColor === color.name ? '' : color.name)} // Toggle selection
+                                            ></div>
+                                        ))}
+                                    </div>
+                                
+                           
+                        )}
 
+{selectedColor && (
+                        <div className="selected-color-display">
+                            <div
+                                className="selected-color-square"
+                                style={{
+                                    backgroundColor: airpodsMaxColors.find(color => color.name === selectedColor)?.hex
+                                }}
+                            ></div>
+                            <p > اللون المحدد:</p>
+
+                        </div>
+                    )}
                         <button type="submit" className="order-button">➤  اشتري الآن وادفع لاحقا</button>
                     </form>
                 </div>
