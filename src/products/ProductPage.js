@@ -189,35 +189,35 @@ const ProductPage = () => {
             setSelectedImage(foundProduct.images[0]);
         }
 
-         // Countdown logic modified to restart every 59 minutes
-    const initializeCountdown = () => {
-        // Set the countdown to 59 minutes (59 * 60 * 1000 ms)
-        const newTargetTime = new Date().getTime() + 59 * 60 * 1000;
-        localStorage.setItem('targetTime', newTargetTime);
-        return newTargetTime;
-    };
+        // Countdown logic modified to restart every 59 minutes
+        const initializeCountdown = () => {
+            // Set the countdown to 59 minutes (59 * 60 * 1000 ms)
+            const newTargetTime = new Date().getTime() + 59 * 60 * 1000;
+            localStorage.setItem('targetTime', newTargetTime);
+            return newTargetTime;
+        };
 
-    // Get the stored target time or initialize it to 59 minutes
-    let targetTime = parseInt(localStorage.getItem('targetTime'), 10) || initializeCountdown();
+        // Get the stored target time or initialize it to 59 minutes
+        let targetTime = parseInt(localStorage.getItem('targetTime'), 10) || initializeCountdown();
 
-    const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const difference = targetTime - now;
+        const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const difference = targetTime - now;
 
-        if (difference <= 0) {
-            // Reset countdown when it reaches zero
-            targetTime = initializeCountdown();
-        } else {
-            // Calculate time left
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-            setTimeLeft({ hours, minutes, seconds });
-        }
-    }, 1000);
+            if (difference <= 0) {
+                // Reset countdown when it reaches zero
+                targetTime = initializeCountdown();
+            } else {
+                // Calculate time left
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                setTimeLeft({ hours, minutes, seconds });
+            }
+        }, 1000);
 
-    return () => clearInterval(interval);
-}, [productId]);
+        return () => clearInterval(interval);
+    }, [productId]);
 
     const scrollToReviews = () => {
         const reviewsSection = document.querySelector('.reviews');
@@ -296,10 +296,10 @@ const ProductPage = () => {
                 <h1 style={{ fontSize: '16px' }}>{product.bonus4_ar} </h1>
 
                 <div id="orderForm" className="order-form" ref={formRef}>
-                <p className="price">
-                    <span className="new-price">د.م{price} </span>
-                    <span className="old-price">د.م{product.oldPrice} </span>
-                </p>
+                    <p className="price">
+                        <span className="new-price">د.م{price} </span>
+                        <span className="old-price">د.م{product.oldPrice} </span>
+                    </p>
                     <form onSubmit={handleFormSubmit}>
                         <div>
                             <input
@@ -348,21 +348,23 @@ const ProductPage = () => {
                             />
                             {errors.city && <p className="error-message">{errors.city}</p>}
                         </div>
-                        <h3>اختر اللون </h3>
 
                         {product.color === 1 && (
-                            <div className="color-selection">
-                                {airpodsMaxColors.map((color) => (
-                                    <div
-                                        key={color.name}
-                                        className={`color-option ${selectedColor === color.name ? 'selected' : ''}`}
-                                        style={{ backgroundColor: color.hex }} // Set background color
-                                        onClick={() => setSelectedColor(selectedColor === color.name ? '' : color.name)} // Toggle selection
-                                    ></div>
-                                ))}
-                            </div>
+                            <><h3>اختر اللون </h3>
 
+                                <div className="color-selection">
 
+                                    {airpodsMaxColors.map((color) => (
+                                        <div
+                                            key={color.name}
+                                            className={`color-option ${selectedColor === color.name ? 'selected' : ''}`}
+                                            style={{ backgroundColor: color.hex }} // Set background color
+                                            onClick={() => setSelectedColor(selectedColor === color.name ? '' : color.name)} // Toggle selection
+                                        ></div>
+                                    ))}
+                                </div>
+
+                            </>
                         )}
 
                         {selectedColor && (
@@ -377,7 +379,6 @@ const ProductPage = () => {
 
                             </div>
                         )}
-                        <h3>اختر خيارًا :</h3>
                         <div className="radio-group">
                             <input
                                 type="radio"
@@ -433,13 +434,13 @@ const ProductPage = () => {
 
                 <div id='firstForm' ref={formRef}></div>
 
-                
+
 
                 {/* Formulaire d'achat */}
 
 
                 {/* Compte à rebours */}
-                
+
 
                 {/* Caractéristiques du produit */}
                 <div className="features">
