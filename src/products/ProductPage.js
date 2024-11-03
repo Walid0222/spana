@@ -10,7 +10,7 @@ import Swal from 'sweetalert2'; // Importer SweetAlert
 const ProductPage = () => {
     const [selectedColor, setSelectedColor] = useState('');
     const airpodsMaxColors = [
-       
+
         { name: 'أخضر', hex: '#28a745' }, // Green
         { name: 'أسود', hex: '#333333' }  // Black
     ];
@@ -189,34 +189,35 @@ const ProductPage = () => {
             setSelectedImage(foundProduct.images[0]);
         }
 
-        // Gestion du compte à rebours avec 6 heures restantes
-        const storedTargetTime = localStorage.getItem('targetTime');
-        let targetTime;
+         // Countdown logic modified to restart every 59 minutes
+    const initializeCountdown = () => {
+        // Set the countdown to 59 minutes (59 * 60 * 1000 ms)
+        const newTargetTime = new Date().getTime() + 59 * 60 * 1000;
+        localStorage.setItem('targetTime', newTargetTime);
+        return newTargetTime;
+    };
 
-        if (storedTargetTime) {
-            targetTime = parseInt(storedTargetTime, 10);
+    // Get the stored target time or initialize it to 59 minutes
+    let targetTime = parseInt(localStorage.getItem('targetTime'), 10) || initializeCountdown();
+
+    const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const difference = targetTime - now;
+
+        if (difference <= 0) {
+            // Reset countdown when it reaches zero
+            targetTime = initializeCountdown();
         } else {
-            targetTime = new Date().getTime() + 6 * 60 * 60 * 1000; // 6 heures
-            localStorage.setItem('targetTime', targetTime);
+            // Calculate time left
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            setTimeLeft({ hours, minutes, seconds });
         }
+    }, 1000);
 
-        const interval = setInterval(() => {
-            const now = new Date().getTime();
-            const difference = targetTime - now;
-
-            if (difference < 0) {
-                clearInterval(interval);
-                setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
-            } else {
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-                setTimeLeft({ hours, minutes, seconds });
-            }
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, [productId]); // Use productId here
+    return () => clearInterval(interval);
+}, [productId]);
 
     const scrollToReviews = () => {
         const reviewsSection = document.querySelector('.reviews');
@@ -286,30 +287,19 @@ const ProductPage = () => {
                 <h1 style={{ fontSize: '20px' }}>{product.name} {product.name.includes("Spotify premium") && (
                     <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />
                 )}</h1>
+
                 <h1 style={{ fontSize: '16px' }}>{product.bonus1} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus2} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus1_ar} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus2_ar} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus3_ar} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus4_ar} </h1>
-                <img src={product.bonusImage} alt={product.name} className="bonus-image" />
-                <h3> ⚠️ راه كاين تخفيض مؤقت ⚠️                </h3>
-                <ul style={{ listStyleType: 'none' }}>
-                    {product.description && product.description.map((description, index) => (
-                        <li key={index}>{description}</li>
-                    ))}
-                </ul>
-                <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   {product.infos}</h1>
 
-                <div id='firstForm' ref={formRef}></div>
-
+                <div id="orderForm" className="order-form" ref={formRef}>
                 <p className="price">
                     <span className="new-price">د.م{price} </span>
                     <span className="old-price">د.م{product.oldPrice} </span>
                 </p>
-
-                {/* Formulaire d'achat */}
-                <div id="orderForm" className="order-form" ref={formRef}>
                     <form onSubmit={handleFormSubmit}>
                         <div>
                             <input
@@ -358,7 +348,35 @@ const ProductPage = () => {
                             />
                             {errors.city && <p className="error-message">{errors.city}</p>}
                         </div>
+                        <h3>اختر اللون </h3>
 
+                        {product.color === 1 && (
+                            <div className="color-selection">
+                                {airpodsMaxColors.map((color) => (
+                                    <div
+                                        key={color.name}
+                                        className={`color-option ${selectedColor === color.name ? 'selected' : ''}`}
+                                        style={{ backgroundColor: color.hex }} // Set background color
+                                        onClick={() => setSelectedColor(selectedColor === color.name ? '' : color.name)} // Toggle selection
+                                    ></div>
+                                ))}
+                            </div>
+
+
+                        )}
+
+                        {selectedColor && (
+                            <div className="selected-color-display">
+                                <div
+                                    className="selected-color-square"
+                                    style={{
+                                        backgroundColor: airpodsMaxColors.find(color => color.name === selectedColor)?.hex
+                                    }}
+                                ></div>
+                                <p > اللون المحدد:</p>
+
+                            </div>
+                        )}
                         <h3>اختر خيارًا :</h3>
                         <div className="radio-group">
                             <input
@@ -381,56 +399,47 @@ const ProductPage = () => {
                             />
                             <p>العرض الثاني 2 ب {product.twoPrice} درهم </p><span className="promotion-small">-57%</span>
                         </div>
-                        {product.color === 1 && (
-                                    <div className="color-selection">
-                                        {airpodsMaxColors.map((color) => (
-                                            <div
-                                                key={color.name}
-                                                className={`color-option ${selectedColor === color.name ? 'selected' : ''}`}
-                                                style={{ backgroundColor: color.hex }} // Set background color
-                                                onClick={() => setSelectedColor(selectedColor === color.name ? '' : color.name)} // Toggle selection
-                                            ></div>
-                                        ))}
-                                    </div>
-                                
-                           
-                        )}
 
-{selectedColor && (
-                        <div className="selected-color-display">
-                            <div
-                                className="selected-color-square"
-                                style={{
-                                    backgroundColor: airpodsMaxColors.find(color => color.name === selectedColor)?.hex
-                                }}
-                            ></div>
-                            <p > اللون المحدد:</p>
-
-                        </div>
-                    )}
                         <button type="submit" className="order-button">➤  اشتري الآن وادفع لاحقا</button>
                     </form>
                 </div>
                 <div className="fixed-bottom-order">
                     <button type="button" className="fixed-order-button" onClick={handleScrollToFormAndSubmit}>➤   اشتري الآن وادفع لاحقا</button>
                 </div>
-
-                {/* Compte à rebours */}
                 <div className="countdown">
                     <h3>سينتهي العرض في :</h3>
                     <div className="countdown-timer">
+                        <span>00 </span>
                         <span>{String(timeLeft.hours).padStart(2, '0')} :</span>
                         <span>{String(timeLeft.minutes).padStart(2, '0')} :</span>
                         <span>{String(timeLeft.seconds).padStart(2, '0')}:</span>
-                        <span>0 </span>
                     </div>
                     <div className="countdown-days">
-                        <span> أيام</span>
                         <span> ثواني</span>
                         <span> دقائق</span>
                         <span> ساعات</span>
+                        <span> أيام</span>
+
                     </div>
                 </div>
+                <img src={product.bonusImage} alt={product.name} className="bonus-image" />
+                <h3> ⚠️  تخفيض مؤقت ⚠️                </h3>
+                <ul style={{ listStyleType: 'none' }}>
+                    {product.description && product.description.map((description, index) => (
+                        <li key={index}>{description}</li>
+                    ))}
+                </ul>
+                <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   {product.infos}</h1>
+
+                <div id='firstForm' ref={formRef}></div>
+
+                
+
+                {/* Formulaire d'achat */}
+
+
+                {/* Compte à rebours */}
+                
 
                 {/* Caractéristiques du produit */}
                 <div className="features">
