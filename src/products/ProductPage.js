@@ -287,6 +287,7 @@ const ProductPage = () => {
                 <h1 style={{ fontSize: '20px' }}>{product.name} {product.name.includes("Spotify premium") && (
                     <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />
                 )}</h1>
+                <div id='firstForm' ref={formRef}></div>
 
                 <h1 style={{ fontSize: '16px' }}>{product.bonus1} </h1>
                 <h1 style={{ fontSize: '16px' }}>{product.bonus2} </h1>
@@ -300,6 +301,7 @@ const ProductPage = () => {
                         <span className="new-price">د.م{price} </span>
                         <span className="old-price">د.م{product.oldPrice} </span>
                     </p>
+
                     <form onSubmit={handleFormSubmit}>
                         <div>
                             <input
@@ -432,7 +434,6 @@ const ProductPage = () => {
                 </ul>
                 <h1 style={{ fontSize: '16px', fontWeight: 'bold' }}>   {product.infos}</h1>
 
-                <div id='firstForm' ref={formRef}></div>
 
 
 
