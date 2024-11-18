@@ -9,6 +9,7 @@ import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Login from './components/Login'; // La page de connexion
 import ProtectedRoute from './components/ProtectedRoute'; // La route protégée
+import FacebookPixel from './FacebookPixel'; // Make sure the path is correct
 
 function AppContent() {
   const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem('auth') === 'true');
@@ -31,6 +32,8 @@ function AppContent() {
 
   return (
     <div className="App">
+              <FacebookPixel /> {/* Add the Facebook Pixel component here */}
+
       <Header />
       <Routes>
         <Route path="/login" element={<Login onLogin={setIsAuthenticated} />} />
