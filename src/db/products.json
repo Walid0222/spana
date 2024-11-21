@@ -149,8 +149,8 @@
         "id": 10,
         "color":1,
         "name": "AirPods Max ( Version USA 🇺🇸 ) ",
-        "price": "219 ",
-        "twoPrice": "419 ",
+        "price": "249 ",
+        "twoPrice": "449 ",
         "oldPrice": "629 ",
         "bonus1_ar": "✅ حساب سبوتيفاي بريميوم خاص مجاني ",
         "bonus2_ar": "✅   غلاف مجاني ",
@@ -184,12 +184,12 @@
         "id": 12,
         "name": "AirPods 3 (Version USA 🇺🇸)",
         "price": "179",
-        "twoPrice": "340",
+        "twoPrice": "339",
         "oldPrice": "399",
         "bonus1_ar": "✅ حساب سبوتيفاي بريميوم خاص مجاني",
         "bonus2_ar": "✅   غلاف مجاني",
         "bonus3_ar": "✅ كيشدو ف الشارج حتال 30 ساعة",
-        "bonus4_ar": "✅  ضمان ديال 6 أشهر كاملة من المصنع 📜",
+        "bonus4_ar": "✅  ضمان ديال 3 أشهر كاملة من المصنع 📜",
         "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر",
         "description": [
             "🎉 AirPods 3 Master Copy"
@@ -205,8 +205,6 @@
         ],
         "images": [
             "/airpods3/image6.jpg",
-            "/airpods3/image5.jpg",
-            "/airpods3/image4.jpg",
             "/airpods3/image3.jpg",
             "/airpods3/image2.jpg",
             "/airpods3/image1.jpg"
@@ -219,7 +217,7 @@
         "id": 13,
         "name": "Pack Ultra+ Pro5 – Montre Connectée & Écouteurs Sans Fil",
         "price": "199",
-        "twoPrice": "380",
+        "twoPrice": "379",
         "oldPrice": "459",
         "bonus1_ar": "✅ حساب سبوتيفاي بريميوم خاص مجاني",
         "bonus2_ar": "✅   غلاف مجاني",
