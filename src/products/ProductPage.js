@@ -12,7 +12,9 @@ const ProductPage = () => {
     const airpodsMaxColors = [
 
         { name: 'أخضر', hex: '#28a745' }, // Green
-        { name: 'أسود', hex: '#333333' }  // Black
+        { name: 'أسود', hex: '#333333' }, // Black
+        { name: 'أزرق', hex: '#007bff' }, // Blue
+        { name: 'أحمر', hex: '#ff0000' }  // Red
     ];
     const { productId } = useParams(); // Get the productId from URL parameters
     const [product, setProduct] = useState(null);
@@ -53,6 +55,7 @@ const ProductPage = () => {
     };
 
     useEffect(() => {
+        
         getNextId(); // Appeler la fonction pour récupérer l'ID dès le chargement
     }, []);
 
