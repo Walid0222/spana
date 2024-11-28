@@ -285,7 +285,7 @@ const ProductPage = () => {
             </div>
 
             <div className="product-content">
-                <p className="promotion-text">BLACK FRIDAY !!</p>
+                <p className="promotion-text">PROMOTION -57%</p>
 
                 <h1 style={{ fontSize: '20px' }}>{product.name} {product.name.includes("Spotify premium") && (
                     <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />

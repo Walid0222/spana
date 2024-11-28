@@ -31,7 +31,7 @@ const ProductList = () => {
             <BannerPromo />
 
       <div className="bannerPromo">
-        <p className="promotion-text">BLACK FRIDAY</p>
+        <p className="promotion-text">PROMOTION : -57%</p>
       </div>
 
       {categories.map((category, categoryIndex) => (

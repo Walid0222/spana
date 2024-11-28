@@ -13,7 +13,7 @@ const Header = () => {
         <>
             <div className="header-top">
                 <p style={{ fontSize: '15px' }}>
-                 <span style={{ fontWeight: 'bold' }}></span>  <span style={{ fontWeight: 'bold' }}>Stock limité !!</span>
+                    Livraison <span style={{ fontWeight: 'bold' }}>Gratuite</span> & <span style={{ fontWeight: 'bold' }}>Garantie Offerte</span>
                 </p>            </div>
 
             <header className="header-main">
