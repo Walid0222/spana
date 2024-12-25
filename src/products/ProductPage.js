@@ -175,7 +175,10 @@ const ProductPage = () => {
             [e.target.name]: e.target.value
         });
     };
-
+    useEffect(() => {
+        window.scrollTo(0, 0);  // Déplace la page en haut
+    }, []);
+    
     useEffect(() => {
         // Trouver le produit correspondant
         const foundProduct = productsData.find(p => p.id === parseInt(productId)); // Use productId

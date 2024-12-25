@@ -21,3 +21,80 @@
     background-color: #128c7e;
     color: #fff;
   }
+
+  /* Style général pour le pop-up */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Assurez-vous que le pop-up est au-dessus des autres éléments */
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.popup p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Espace entre les boutons */
+}
+
+/* Style du bouton "اسألنا" (WhatsApp) */
+.popup-whatsapp-btn {
+  background-color: #25d366;  /* Couleur verte typique de WhatsApp */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.popup-whatsapp-btn i {
+  margin-right: 5px; /* Espace entre l'icône et le texte */
+}
+
+.popup-whatsapp-btn:hover {
+  opacity: 0.8; /* Effet au survol */
+}
+
+/* Style du bouton "إغلاق" */
+.popup-close-btn {
+  background-color: #f44336;  /* Couleur rouge pour le bouton "إغلاق" */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.popup-close-btn i {
+  margin-right: 5px; /* Espace entre l'icône et le texte */
+}
+
+.popup-close-btn:hover {
+  opacity: 0.8; /* Effet au survol */
+}
