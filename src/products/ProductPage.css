@@ -442,7 +442,7 @@ font-weight: bold;
     font-size: 17px;
     font-weight: bold;
     background-color: yellow;
-    padding: 5px 10px;
+    padding: 3px 8px;
     border-radius: 5px;
     margin-bottom: 15px;
     text-align: center;
@@ -451,13 +451,13 @@ font-weight: bold;
 
 @keyframes pulse {
     0% {
-        transform: scale(1);
+        transform: scale(0.9);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1);
     }
     100% {
-        transform: scale(1);
+        transform: scale(0.9);
     }
 }
 

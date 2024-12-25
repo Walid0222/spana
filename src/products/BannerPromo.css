@@ -1,7 +1,7 @@
 /* src/components/BannerPromo.css */
 .banner-promo {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
-      url('/public/banner-image.jpg'); /* Assurez-vous que l'image est placée dans le dossier public */
+      url('/banner-image.jpg'); /* Assurez-vous que l'image est placée dans le dossier public */
     background-size: cover;
     background-position: center;
     color: #f8f9fa;
