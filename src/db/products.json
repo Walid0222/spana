@@ -244,5 +244,43 @@
         "rating": "5",
         "nombreRating": "682",
         "category": "Pack"
+    },
+    {
+        "id": 15,
+        "name": "Smart watch Rollex ( Version USA 🇺🇸 ) ",
+        "price": "449 ",
+        "twoPrice": "829 ",
+        "oldPrice": "700 ",
+        
+        "bonus3_ar": "✅ ضمان ديال 12 أشهر كاملة   📜",
+        "bonus4_ar": "✅ NFC تتميز بتقنية  ",
+
+        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 12 أشهر",
+        "description": [
+    "📱 Écran tactile : Grand écran HD, lumineux et réactif",
+    "🧭 GPS intégré : Suivi précis de vos activités",
+    "💡 Notifications intelligentes : Appels, messages, et réseaux sociaux en un coup d’œil",
+    "🏋️‍♂️ Suivi d’activité : Podomètre, cardiofréquencemètre, suivi du sommeil",
+    "💦 Résistance à l’eau : Certifiée IP68 pour toutes vos activités",
+    "⚡ Autonomie : Jusqu’à 7 jours avec une seule charge",
+    "📞 Appels Bluetooth : Répondez et passez des appels directement depuis la montre",
+    "🎵 Contrôle de la musique : Gérez vos playlists en toute simplicité",
+    "🔋 Recharge rapide : 2 heures de charge pour une semaine d’utilisation"
+],
+        "primaryImage": "/rollex/image1.jpeg",
+
+        "features": [
+            
+        ],
+        "images": [
+            "/rollex/image1.jpeg",
+            "/rollex/image2.jpeg",
+            "/rollex/image3.jpeg",
+            "/rollex/image4.jpeg",
+            "/rollex/image5.jpeg"
+        ],
+        "rating": "5",
+        "nombreRating": "1163",
+        "category": "Smart Watch"
     }
 ]
