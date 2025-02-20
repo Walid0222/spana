@@ -43,7 +43,7 @@ function AppContent() {
       (function () {
         var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
         s1.async = true;
-        s1.src = 'https://embed.tawk.to/66fc8eab4cbc4814f7e1c187/1i958qjgl'; // Votre code d'intégration
+        s1.src = 'https://embed.tawk.to/66fc'; // Votre code d'intégration
         s1.charset = 'UTF-8';
         s1.setAttribute('crossorigin', '*');
         s0.parentNode.insertBefore(s1, s0);
