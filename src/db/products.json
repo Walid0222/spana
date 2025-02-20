@@ -1,286 +1,35 @@
 [
     {
         "id": 1,
-        "name": "AirPods Pro 2éme ANC ( Version USA 🇺🇸 ) ",
+        "name": "Vegetable cutter pour fruits et légumes 22 in 1 ",
         "price": "179 ",
         "twoPrice": "319 ",
         "oldPrice": "429 ",
-        "bonus1_ar": "✅ Airpods غلاف مجاني ",
-        "bonus2_ar": "",
-        "bonus3_ar": "✅ ضمان ديال 3 أشهر كاملة   📜",
-        "bonus4_ar": "✅ حساب سبوتيفاي بريميوم خاص مجاني ",
+        "bonus1_ar": "مستورد من إسبانيا 🇪🇸",
+        "bonus2_ar": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 12 أشهر",
+        "bonus3_ar": "🔽 تابع للأسفل لاكتشاف المميزات الرئيسية! 🔽",
 
-        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر",
-        "description": [
-            "🎉 AirPods Pro الجيل الثاني",
-            "🔋 البطارية كتدوم حتى 7 ساعات ديال الاستعمال المستمر، وكيكون عندك إمكانية تشحنهم 5 المرات من العلبة الخاصة بيهم، يعني كتوصل ب كثر من 30 ساعة ديال الاستماع."
-            
-        ],
-        "primaryImage": "/airpodspro2/image3.jpeg",
-        "bonusImage": "/airpodsmax/spotify2.png",
-
+        "infos": "",
+        "description": [],
+        "primaryImage": "/cutter1/image1.jpg",
+        "bonusImage": "/cutter1/spotify2.png",
         "features": [
-            "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
-            "✅ كيشدو ف الشارج حتال 30 ساعة",
-            "✅ GPS خاصية  في حال توضرو ليك",
-            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
-            "✅ كيخدمو فجميع انواع الهواتف",
-            "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
-            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
+            "✅ متعددة الوظائف: يمكنها التقطيع، الفرم، البشر والتقطيع بأشكال وأحجام مختلفة.",
+            "✅ تصميم عملي: تحتوي على وعاء شفاف لتخزين الخضروات مع سلة تصفية مدمجة.",
+            "✅ شفرات من الفولاذ المقاوم للصدأ: حادة وقوية لضمان تقطيع دقيق وسريع.",
+            "✅ آمنة وسهلة الاستخدام: مزودة بحامي للأصابع ومقبض مريح لضمان الأمان أثناء الاستعمال.",
+            "✅ سهلة التنظيف: جميع الأجزاء قابلة للفك والغسل، ومتوافقة مع غسالة الصحون.",
+            "✅ ملحقات إضافية: تحتوي على قشارة، فاصل صفار البيض، وضاغط للخضروات لتسهيل التحضير."
         ],
         "images": [
-            "/airpodspro2/image1.jpeg",
-            "/airpodspro2/image3.jpeg",
-            "/airpodspro2/image4.jpeg"
+            "/cutter1/image2.jpg",
+            "/cutter1/image3.jpg",
+            "/cutter1/image4.jpg",
+            "/cutter1/image5.jpg",
+            "/cutter1/image6.jpg"
         ],
         "rating": "5",
-        "nombreRating": "463",
-        "category": "AirPods"
-    },
-    {
-        "id": 5,
-        "name": "Apple Watch Ultra 2 ( Version USA 🇺🇸 )",
-        "price": "479",
-        "twoPrice": "899",
-        "oldPrice": "789",
-        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 6 أشهر",
-        "description": "L'Apple Watch Ultra 2 est une montre extrêmement robuste conçue pour les aventuriers et les athlètes. Fabriquée en aluminium léger, elle offre une durabilité et une résistance exceptionnelles, tout en étant confortable à porter. Cette montre combine résistance à l'eau jusqu'à 100 mètres et des capteurs avancés pour surveiller la santé et la performance sportive. Avec son écran toujours allumé, une batterie améliorée et un GPS ultra précis, elle est idéale pour les conditions les plus difficiles.",
-        "primaryImage": "/applewatchultra2/image1.png",
-        "features": [
-            "💥 شاشة كتخدم ديما بسطوع حتى 2000 شمعة، باش تكون عندك الرؤية واضحة فأي ظروف.",
-            "✅ كاينة فيها أجهزة استشعار متطورة: تخطيط القلب (ECG)، وقياس نسبة الأوكسجين ف الدم (SpO2)، وتتبع النوم.",
-            "✅ متوافقة مع جميع تليفونات iPhone و Android.",
-            "✅ مصنوعة من الألومنيوم باش تكون متينة.",
-            "✅ كاين فيها الاتصال الخلوي باش تقدر تستعملها بلا ما تحتاج تليفون."
-        ],
-        "images": [
-            "/applewatchultra2/image1.png",
-            "/applewatchultra2/image2.png",
-            "/applewatchultra2/image3.png"
-        ],
-        "rating": "5",
-        "nombreRating": "256",
-        "category": "Apple Watch"
-    },
-    {
-        "id": 6,
-        "name": "Smart Watch Series 9 ( Super Amoled )",
-        "price": "199",
-        "twoPrice": "359",
-        "oldPrice": "599",
-        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 6 أشهر",
-        "description": "Smart watch series 9 est une montre extrêmement robuste conçue pour les aventuriers et les athlètes. Fabriquée en aluminium léger, elle offre une durabilité et une résistance exceptionnelles, tout en étant confortable à porter. Cette montre combine résistance à l'eau jusqu'à 100 mètres et des capteurs avancés pour surveiller la santé et la performance sportive. Avec son écran toujours allumé, une batterie améliorée et un GPS ultra précis, elle est idéale pour les conditions les plus difficiles.",
-        "primaryImage": "/smartwatchtsport/image1.png",
-        "features": [
-            "💥 شاشة كتخدم ديما بسطوع حتى 2000 شمعة، باش تكون عندك الرؤية واضحة فأي ظروف.",
-            "✅ كاينة فيها أجهزة استشعار متطورة: تخطيط القلب (ECG)، وقياس نسبة الأوكسجين ف الدم (SpO2)، وتتبع النوم.",
-            "✅ متوافقة مع جميع تليفونات iPhone و Android.",
-            "✅ مصنوعة من الألومنيوم باش تكون متينة.",
-            "✅ كاين فيها الاتصال الخلوي باش تقدر تستعملها بلا ما تحتاج تليفون."
-        ],
-        "images": [
-            "/smartwatchtsport/image1.png",
-            "/smartwatchtsport/image2.png",
-            "/smartwatchtsport/image3.png"
-        ],
-        "rating": "5",
-        "nombreRating": "221",
-        "category": "Smart Watch"
-    },
-    {
-        "id": 3,
-        "name": "Chargeur iPhone + Cable GRATUIT ",
-        "price": "199 ",
-        "twoPrice": "199 ",
-        "oldPrice": "589 ",
-        "bonus": "Avec câble Gratuit",
-        "bonus1": "Avec câble Gratuit",
-        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر",
-        "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
-        "primaryImage": "/chargeurEtCable/image1.png",
-        "stock": "out of stock",
-        "features": [
-            "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
-            "✅ كيشدو ف الشارج حتال 24 ساعة",
-            "✅ GPS خاصية  في حال توضرو ليك",
-            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
-            "✅ كيخدمو فجميع انواع الهواتف",
-            "✅ واخيرا جبناهم ليكم باحسن جودة و ثمن حاليا فالمغرب 🇲🇦",
-            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
-        ],
-        "images": [
-            "/chargeurEtCable/image1.png",
-            "/chargeurEtCable/image2.png",
-            "/chargeurEtCable/image3.png"
-        ],
-        "rating": "5",
-        "nombreRating": "564",
-        "category": "Accessoire"
-    },
-    {
-        "id": 4,
-        "name": " xiaomi Fast Charge 20000mAh 🔋",
-        "price": "229 ",
-        "twoPrice": "199 ",
-        "oldPrice": "400 ",
-        "bonus": "",
-        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر",
-        "description": "Les AirPods Pro 2ème génération offrent des performances améliorées avec une réduction active du bruit.",
-        "primaryImage": "/xiaomiPowerbank/image1.png",
-        "stock": "out of stock",
-        "features": [
-            "💥 iMarket لي جابت ليكم Airpods Pro 2 eme generation اجي تشوف معايا مميزات ديال هاد    :",
-            "✅ كيشدو ف الشارج حتال 24 ساعة",
-            "✅ GPS خاصية  في حال توضرو ليك",
-            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
-            "✅ كيخدمو فجميع انواع الهواتف",
-            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
-        ],
-        "images": [
-            "/xiaomiPowerbank/image1.png",
-            "/xiaomiPowerbank/image2.png",
-            "/xiaomiPowerbank/image3.png"
-        ],
-        "rating": "5",
-        "nombreRating": "139",
-        "category": "Accessoire"
-    },
-    {
-        "id": 10,
-        "color":1,
-        "name": "AirPods Max ( Version USA 🇺🇸 ) ",
-        "price": "229 ",
-        "twoPrice": "399 ",
-        "oldPrice": "529 ",
-        "bonus1_ar": "✅ حساب سبوتيفاي بريميوم خاص مجاني ",
-        "bonus2_ar": "✅   غلاف مجاني ",
-        "bonus4_ar": "✅  ضمان ديال 6 أشهر كاملة  📜",
-        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 6 أشهر",
-        "description": [
-            "🎉 AirPods Max Master Copy "
-            
-        ],
-        "primaryImage": "/airpodsmax/image3.jpg",
-        "bonusImage": "/airpodsmax/spotify2.png",
-        "features": [
-            "💥 iMarket لي جابت ليكم Airpods Max اجي تشوف معايا مميزات ديال هاد    :",
-            "✅ كيشدو ف الشارج حتال 30 ساعة",
-            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
-            "✅ كيخدمو فجميع انواع الهواتف",
-            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 6 اشهر"
-        ],
-        "images": [
-            "/airpodsmax/image6.jpg",
-            "/airpodsmax/image2.jpg",
-            "/airpodsmax/image1.jpg",
-            "/airpodsmax/image5.jpg"
-        ],
-        "rating": "5",
-        "nombreRating": "478",
-        "category": "AirPods"
-    },
-    {
-        "id": 12,
-        "name": "AirPods 3 (Version USA 🇺🇸)",
-        "price": "179",
-        "twoPrice": "339",
-        "oldPrice": "399",
-        "bonus1_ar": "✅ حساب سبوتيفاي بريميوم خاص مجاني",
-        "bonus2_ar": "✅   غلاف مجاني",
-        "bonus3_ar": "✅ كيشدو ف الشارج حتال 30 ساعة",
-        "bonus4_ar": "✅  ضمان ديال 3 أشهر كاملة من المصنع 📜",
-        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 3 أشهر",
-        "description": [
-            "🎉 AirPods 3 Master Copy"
-        ],
-        "primaryImage": "/airpods3/PHOTO-2024-11-18-01-44-56.jpg",
-        "bonusImage": "/airpods3/spotify2.png",
-        "features": [
-            "💥 iMarket لي جابت ليكم AirPods 3 اجي تشوف معايا مميزات ديال هاد :",
-            "✅ كيشدو ف الشارج حتال 30 ساعة",
-            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
-            "✅ كيخدمو فجميع انواع الهواتف",
-            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 3 اشهر"
-        ],
-        "images": [
-            "/airpods3/image6.jpg",
-            "/airpods3/image3.jpg",
-            "/airpods3/image2.jpg",
-            "/airpods3/image1.jpg"
-        ],
-        "rating": "5",
-        "nombreRating": "407",
-        "category": "AirPods"
-    },
-    {
-        "id": 13,
-        "name": "Pack Ultra+ Pro5 – Montre Connectée & Écouteurs Sans Fil",
-        "price": "199",
-        "twoPrice": "379",
-        "oldPrice": "459",
-        "bonus1_ar": "✅ حساب سبوتيفاي بريميوم خاص مجاني",
-        "bonus2_ar": "✅   غلاف مجاني",
-        "bonus3_ar": "✅ كيشدو ف الشارج حتال 30 ساعة",
-        "bonus4_ar": "✅  ضمان ديال 6 أشهر كاملة من المصنع 📜",
-        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 6 أشهر",
-        "description": [
-            "🎉 Pack Ultra+ Pro5 – Montre Connectée & Écouteurs Sans Fil"
-        ],
-        "primaryImage": "/ultrapro5/image3.jpg",
-        "bonusImage": "/ultrapro5/spotify2.png",
-        "features": [
-            "💥 iMarket لي جابت ليكم Pack Ultra+ Pro5، اجي تشوف معايا مميزات ديال هاد :",
-            "✅ كيشدو ف الشارج حتال 30 ساعة",
-            "✅ ميكروفون بجودة عالية ومتحتاجش ترفع صوتك باش اسمعك الشخص الاخر",
-            "✅ كيخدمو فجميع انواع الهواتف",
-            "التوصيل مجانا 🚚 في جميع مدن المغرب ف 24 ساعة ونزيدك عندك ضمان 6 اشهر"
-        ],
-        "images": [
-            "/ultrapro5/image6.jpg",
-            "/ultrapro5/image2.jpg",
-            "/ultrapro5/image1.jpg",
-            "/ultrapro5/image3.jpg"
-        ],
-        "rating": "5",
-        "nombreRating": "682",
-        "category": "Pack"
-    },
-    {
-        "id": 15,
-        "name": "Smart watch Rollex ( Version USA 🇺🇸 ) ",
-        "price": "449 ",
-        "twoPrice": "829 ",
-        "oldPrice": "700 ",
-        
-        "bonus3_ar": "✅ ضمان ديال 12 أشهر كاملة   📜",
-        "bonus4_ar": "✅ NFC تتميز بتقنية  ",
-
-        "infos": "✅ التوصيل مجاني و الدفع عند الإستلام 🚚 مع ضمان 12 أشهر",
-        "description": [
-    "📱 Écran tactile : Grand écran HD, lumineux et réactif",
-    "🧭 GPS intégré : Suivi précis de vos activités",
-    "💡 Notifications intelligentes : Appels, messages, et réseaux sociaux en un coup d’œil",
-    "🏋️‍♂️ Suivi d’activité : Podomètre, cardiofréquencemètre, suivi du sommeil",
-    "💦 Résistance à l’eau : Certifiée IP68 pour toutes vos activités",
-    "⚡ Autonomie : Jusqu’à 7 jours avec une seule charge",
-    "📞 Appels Bluetooth : Répondez et passez des appels directement depuis la montre",
-    "🎵 Contrôle de la musique : Gérez vos playlists en toute simplicité",
-    "🔋 Recharge rapide : 2 heures de charge pour une semaine d’utilisation"
-],
-        "primaryImage": "/rollex/image1.jpeg",
-
-        "features": [
-            
-        ],
-        "images": [
-            "/rollex/image1.jpeg",
-            "/rollex/image2.jpeg",
-            "/rollex/image3.jpeg",
-            "/rollex/image4.jpeg",
-            "/rollex/image5.jpeg"
-        ],
-        "rating": "5",
-        "nombreRating": "1163",
-        "category": "Smart Watch"
+        "nombreRating": "1463",
+        "category": "Cuisine"
     }
 ]

@@ -14,16 +14,26 @@ import FacebookPixel from './FacebookPixel'; // Make sure the path is correct
 function AppContent() {
   const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem('auth') === 'true');
   const [showPopup, setShowPopup] = useState(false);
+  const [showFirstPopup, setShowFirstPopup] = useState(false); // Nouveau state pour le premier pop-up
 
   const location = useLocation();
 
   useEffect(() => {
-    // Afficher le pop-up après 10 secondes
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 12000);
+    // Afficher le premier pop-up après 5 secondes
+    const timerFirstPopup = setTimeout(() => {
+      setShowFirstPopup(true);
+    }, 1000);
 
-    return () => clearTimeout(timer); // Nettoyage du timer
+    return () => clearTimeout(timerFirstPopup); // Nettoyage du timer
+  }, []);
+
+  useEffect(() => {
+    // Afficher le deuxième pop-up après 10 secondes
+    const timerSecondPopup = setTimeout(() => {
+      setShowPopup(true);
+    }, 22000);
+
+    return () => clearTimeout(timerSecondPopup); // Nettoyage du timer
   }, []);
 
   useEffect(() => {
@@ -63,7 +73,7 @@ function AppContent() {
       <Footer />
       {!location.pathname.startsWith('/orderspage' && !location.pathname.startsWith('/login')) && (
         <a
-          href="https://wa.me/+212678811463" // Remplacez avec votre numéro de téléphone
+          href="https://wa.me/+2126" // Remplacez avec votre numéro de téléphone
           className="whatsapp_float"
           target="_blank"
           rel="noopener noreferrer"
@@ -72,44 +82,78 @@ function AppContent() {
         </a>
       )}
 
-      {/* Pop-up */}
-      {showPopup && (
-  <div className="popup">
-    <div className="popup-content">
-      <p>
-        إلا عندك شي سؤال على منتج او بغيتي تدير(ي) الطلب ديالك عبر الواتساب، ماعليك غي تسيفط(ي)  لينا ميساج وغادي نجاوبوك ف أقرب وقت 😊
-      </p>
-      <div className="popup-buttons">
-        <a
-          href="https://wa.me/+212678811463"
-          className="popup-whatsapp-btn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-whatsapp"></i> اسألنا
-        </a>
-        {/* Nouveau bouton "إغلاق" à côté */}
-        <button
-          className="popup-close-btn"
-          onClick={() => setShowPopup(false)}
-        >
-          إغلاق
-        </button>
-      </div>
-    </div>
+      {/* Premier pop-up */}
+      {showFirstPopup && (
+        <div className="popup">
+          <div className="popup-content">
+          <p>
+    نحن متجر إسباني يقع في <strong>مدريد، إسبانيا</strong>.
+    <br />
+    نقدم خدمات الشحن إلى المغرب والسعودية مع توصيل في غضون 
+    <strong>24 إلى 48 ساعة</strong> كحد أقصى.
+    <br />
+    <span className="popup-flags">🇪🇸</span>
+    <span className="popup-flags">🇲🇦</span>
+    <span className="popup-flags">🇸🇦</span>
+  </p>
+
+  <p className="popup-warranty">
+    نحن نقدم <strong>ضمان حقيقي</strong> على جميع منتجاتنا، لتكون مطمئنًا حول جودتها وأدائها.
+    <br />
+    في حال واجهت أي مشكلة مع المنتج، <strong>فريقنا المختص في التوصيل</strong> سيقوم 
+    <strong>بإستلام المنتج من عندك</strong> واستبداله أو <strong>إرجاع المبلغ المالي</strong> لك.
+  </p>
+
+  <div className="popup-buttons">
+    <button
+      className="popup-close-btn"
+      onClick={() => setShowFirstPopup(false)}
+    >
+      إغلاق
+    </button>
   </div>
-)}
+</div>
 
-    </div>
-  );
+          </div>
+      )}
+
+          {/* Deuxième pop-up */}
+          {showPopup && (
+            <div className="popup">
+              <div className="popup-content">
+                <p>
+                  إلا عندك شي سؤال على منتج او بغيتي تدير(ي) الطلب ديالك عبر الواتساب، ماعليك غي تسيفط(ي)  لينا ميساج وغادي نجاوبوك ف أقرب وقت 😊
+                </p>
+                <div className="popup-buttons">
+                  <a
+                    href="https://wa.me/+2126"
+                    className="popup-whatsapp-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-whatsapp"></i> اسألنا
+                  </a>
+                  <button
+                    className="popup-close-btn"
+                    onClick={() => setShowPopup(false)}
+                  >
+                    إغلاق
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+        </div>
+      );
 }
 
-function App() {
+      function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
-  );
+      <Router>
+        <AppContent />
+      </Router>
+      );
 }
 
-export default App;
+      export default App;

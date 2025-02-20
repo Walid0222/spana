@@ -28,7 +28,7 @@ h1 {
 }
 
 .orders-table th {
-    background-color: #4765c3;
+    background-color: #000000;
     color: white;
     font-weight: bold;
 }
@@ -129,7 +129,7 @@ h1 {
 }
 
 .button-add-parcel {
-    background-color: #4765c3;
+    background-color: #000000;
     color: white;
 }
 

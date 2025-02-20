@@ -31,7 +31,9 @@ const ProductList = () => {
             <BannerPromo />
 
       <div className="bannerPromo">
-        <p className="promotion-text">PROMOTION : -57%</p>
+        
+        <p className="promotion-text"> 🎉 تخفيض %57 على هذه المنتجات! لا تفوت الفرصة! 🎉
+        </p>
       </div>
 
       {categories.map((category, categoryIndex) => (
@@ -51,8 +53,8 @@ const ProductList = () => {
                       <span className="bonus">{product.bonus}</span>
 
                     </p>
-                    <span className="garantie">Garantie incluse</span>
-                    <div className="promotion-badge">Promo -65%</div>
+                  {/*   <span className="garantie">Garantie incluse</span>
+                    <div className="promotion-badge">Promo -65%</div> */}
 
                     {product.stock === "out of stock" ? (
                       <div className="promotion-badge">Rupture de stock</div>

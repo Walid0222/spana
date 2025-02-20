@@ -55,7 +55,7 @@ const ProductPage = () => {
     };
 
     useEffect(() => {
-        
+
         getNextId(); // Appeler la fonction pour récupérer l'ID dès le chargement
     }, []);
 
@@ -178,7 +178,7 @@ const ProductPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);  // Déplace la page en haut
     }, []);
-    
+
     useEffect(() => {
         // Trouver le produit correspondant
         const foundProduct = productsData.find(p => p.id === parseInt(productId)); // Use productId
@@ -275,20 +275,26 @@ const ProductPage = () => {
             <div className="sidebar">
                 <img src={selectedImage || ''} alt="منتج" className="main-image" />
                 <div className="image-thumbnails">
-                    {product.images && product.images.map((image, index) => (
-                        <img
-                            key={index}
-                            src={image}
-                            alt={`Thumbnail ${index}`}
-                            className={`thumbnail ${selectedImage === image ? 'active' : ''}`}
-                            onClick={() => setSelectedImage(image)}
-                        />
-                    ))}
-                </div>
+    {product.images &&
+        product.images
+            .filter((_, index) => index !== 4 && index !== 5) // Exclure avant l'affichage
+            .map((image, index) => (
+                <img
+                    key={index}
+                    src={image}
+                    alt={`Thumbnail ${index}`}
+                    className={`thumbnail ${selectedImage === image ? 'active' : ''}`}
+                    onClick={() => setSelectedImage(image)}
+                />
+            ))}
+</div>
+
+
             </div>
 
             <div className="product-content">
-                <p className="promotion-text">PROMOTION -57%</p>
+                <p className="promotion-text">🎉 خصم %57 على هذا المنتج! سارع قبل انتهاء الكمية! 🎉
+                </p>
 
                 <h1 style={{ fontSize: '20px' }}>{product.name} {product.name.includes("Spotify premium") && (
                     <img src={`${process.env.PUBLIC_URL}/spotify.png`} alt="شعار Spotify" className="spotify-logo" />
@@ -356,7 +362,14 @@ const ProductPage = () => {
                             />
                             {errors.city && <p className="error-message">{errors.city}</p>}
                         </div>
+                        <div>
+                            <select>
+                            <option value="SA">🇸🇦 السعودية</option>
+                                <option value="MA">🇲🇦 المغرب</option>
+                                <option value="ES">🇪🇸 إسبانيا</option>
+                            </select>
 
+                        </div>
                         {product.color === 1 && (
                             <><h3>اختر اللون </h3>
 
@@ -431,8 +444,6 @@ const ProductPage = () => {
 
                     </div>
                 </div>
-                <img src={product.bonusImage} alt={product.name} className="bonus-image" />
-                <h3> ⚠️  تخفيض مؤقت ⚠️                </h3>
                 <ul style={{ listStyleType: 'none' }}>
                     {product.description && product.description.map((description, index) => (
                         <li key={index}>{description}</li>
@@ -461,41 +472,42 @@ const ProductPage = () => {
 
                 {/* Images du produit */}
                 <div className="product-images-section mobile-only">
-                    <div className="product-images-container">
-                        {product.images && product.images.map((image, index) => (
-                            <img
-                                key={index}
-                                src={image}
-                                className="product-image"
-                                alt={`Product Image ${index + 1}`} // Ajoutez un alt pour l'accessibilité
-                            />
-                        ))}
-                    </div>
-                </div>
+    <div className="product-images-container">
+        {product.images && product.images.map((image, index) => (
+            <div key={index} className="image-wrapper">
+                <span className="image-number">{index + 1}</span> {/* Numérotation */}
+                <img
+                    src={image}
+                    className="product-image"
+                    alt={`Product Image ${index + 1}`} 
+                />
+            </div>
+        ))}
+    </div>
+</div>
+
 
                 {/* Avis clients (mobile only) */}
-                {/*<div className="reviews mobile-only">
-                    <h3>آراء العملاء</h3>
-                    <div className="reviews-container">
-                        {reviews.map((review, index) => (
-                            <div key={index} className="review">
-                                <strong>{review.name} :</strong>
-                                <p>{review.comment}</p>
-                                <img
-                                    src={review.image}
-                                    alt={`Avis de ${review.name}`}
-                                    className="review-image"
-                                    onClick={handleImageClick}
-                                />
-                            </div>
-                        ))}
-                    </div>
+                <div className="reviews mobile-only">
+    <h3>آراء العملاء</h3>
+    <div className="reviews-container">
+        {reviews.map((review, index) => (
+            <div key={index} className="review">
+                <strong>{review.name} ({review.country} ) :</strong>
+                <p>{review.comment}</p>
+                <div className="stars">
+                    {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
+                </div>
+            </div>
+        ))}
+    </div>
 
-                    <div className="arrows-decoration">
-                        <span className="left-arrow-decoration">&lt;</span>
-                        <span className="right-arrow-decoration">&gt;</span>
-                    </div>
-                </div>*/}
+    <div className="arrows-decoration">
+        <span className="left-arrow-decoration">&lt;</span>
+        <span className="right-arrow-decoration">&gt;</span>
+    </div>
+</div>
+
             </div>
         </div>
     );

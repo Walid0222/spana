@@ -10,6 +10,8 @@
     max-width: 1200px;
     margin: 0 auto;
     text-align: right; /* Aligne le texte à droite */
+    font-family: 'cairo', sans-serif;
+    font-weight: bold;
 }
 
 /* Sidebar avec les images miniatures (à gauche, centré) */
@@ -61,11 +63,12 @@
 
 .thumbnail:hover,
 .thumbnail.active {
-    border-color: #4765c3;
+    border-color: #000000;
 }
 
 /* Contenu principal du produit */
 .product-content {
+    font-family: 'cairo', sans-serif;
     width: 55%;
     text-align: right; /* Aligne le texte à droite */
 }
@@ -83,7 +86,7 @@
 }
 
 .new-price {
-    color: #4765c3;
+    color: #000000;
     font-weight: bold;
     font-size: 25px;
 }
@@ -139,7 +142,7 @@
 
 /* Animation pour le bouton "Commander maintenant" */
 .order-button {
-    background-color: #4765c3;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -167,7 +170,7 @@ font-weight: bold;
 }
 
 .order-button:hover {
-    background-color: #4765c3;
+    background-color: #000000;
     animation: none;
     transform: scale(1.1);
 }
@@ -199,7 +202,7 @@ font-weight: bold;
 
 .progress {
     height: 100%;
-    background-color: #4765c3;
+    background-color: #000000;
     border-radius: 5px;
     transition: width 0.3s ease;
 }
@@ -218,7 +221,7 @@ font-weight: bold;
 .countdown-timer {
     font-size: 24px;
     font-weight: bold;
-    color: #4765c3;
+    color: #000000;
 }
 
 .countdown-timer span {
@@ -228,13 +231,18 @@ font-weight: bold;
 .countdown-days {
     font-size: 12px;
     font-weight: bold;
-    color: #4765c3;
+    color: #000000;
 }
 
 .countdown-days span {
     padding: 0 10px;
 }
-
+.countdown-days span:nth-child(1),.countdown-days span:nth-child(2) {
+color: red;
+}
+.countdown-timer span:nth-child(4),.countdown-timer span:nth-child(3) {
+    color: red;
+    }
 /* Caractéristiques du produit */
 .features h3 {
     font-size: 20px;
@@ -384,8 +392,25 @@ font-weight: bold;
 
 /* Ajustement des marges pour espacer correctement */
 .reviews-container {
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
 }
+
+.review {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+    color: gold;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
 
 /* Popup des avis des acheteurs */
 .reviews-popup {
@@ -418,7 +443,7 @@ font-weight: bold;
 
 /* Ajouter une transition pour le clic */
 .reviews-popup:active {
-    background-color: #4765c3;
+    background-color: #000000;
     animation: none; /* Arrête l'animation au clic */
 }
 
@@ -438,10 +463,10 @@ font-weight: bold;
 }
 
 .promotion-text {
-    color: red;
+    color: white;
     font-size: 17px;
     font-weight: bold;
-    background-color: yellow;
+    background-color: red;
     padding: 3px 8px;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -481,7 +506,7 @@ font-weight: bold;
 }
 
 .fixed-order-button {
-    background-color: #4765c3;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -497,7 +522,7 @@ font-weight: bold;
 }
 
 .fixed-order-button:hover {
-    background-color: #4765c3;
+    background-color: #000000;
     transform: scale(1.05);
 }
 
@@ -521,7 +546,7 @@ font-weight: bold;
     appearance: none; /* Supprime l'apparence par défaut sur les autres navigateurs */
     width: 20px; /* Largeur du cercle */
     height: 20px; /* Hauteur du cercle */
-    border: 2px solid #007BFF; /* Bordure du cercle */
+    border: 2px solid #000000; /* Bordure du cercle */
     border-radius: 50%; /* Forme ronde */
     outline: none; /* Supprime le contour */
     cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
@@ -536,7 +561,7 @@ font-weight: bold;
     width: 20px; /* Taille du cercle intérieur */
     height: 20px; /* Taille du cercle intérieur */
     border-radius: 50%; /* Forme ronde */
-    background-color: #007BFF; /* Couleur de fond lorsque sélectionné */
+    background-color: #000000; /* Couleur de fond lorsque sélectionné */
 }
 
 .not-found-container {
@@ -553,7 +578,7 @@ font-weight: bold;
 .not-found-message {
     font-size: 24px;
     font-weight: bold;
-    color: #4765c3; /* Couleur rouge pour attirer l'attention */
+    color: #000000; /* Couleur rouge pour attirer l'attention */
 }
 
 .not-found-description {
@@ -566,7 +591,7 @@ font-weight: bold;
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: #4765c3; /* Couleur du bouton */
+    background-color: #000000; /* Couleur du bouton */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -574,7 +599,7 @@ font-weight: bold;
 }
 
 .back-to-menu-button:hover {
-    background-color: #4765c3; /* Couleur du bouton au survol */
+    background-color: #000000; /* Couleur du bouton au survol */
 }
 /* Container for optional color selection */
 .color-selection {
@@ -602,7 +627,7 @@ font-weight: bold;
 
 /* Highlight the selected color square */
 .color-option.selected {
-    border: 2px solid #4765c3; /* Highlight selected option */
+    border: 2px solid #000000; /* Highlight selected option */
     box-shadow: 0 0 5px rgba(71, 101, 195, 0.7);
 }
 

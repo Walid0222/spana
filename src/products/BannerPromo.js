@@ -3,12 +3,11 @@ import React from 'react';
 import './BannerPromo.css';
 
 const BannerPromo = () => {
-  return (
-    <div className="banner-promo">
-      <p className="banner-text">Votre satisfaction est notre priorité</p>
-      <p className="banner-text">Achetez et beneficier de notre Garantie ou que vous soyez</p>
-    </div>
-  );
-};
-
-export default BannerPromo;
+    return (
+      <div className="banner-promo">
+        <p className="banner-text"> متجر إسباني موثوق، نقدم لك منتجات عالية الجودة مختارة بعناية، مع توصيل سريع وضمان يصل إلى 12 شهرًا. تسوق بثقة، نحن هنا لضمان رضاك التام! 🇪🇸</p>
+      </div>
+    );
+  };
+  
+  export default BannerPromo;

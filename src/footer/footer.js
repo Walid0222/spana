@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-column">
-          <h3>iMarket</h3>
+          <h3>Spana Store 🇪🇸</h3>
           <p>التوصيل خلال 24 ساعة - الدفع عند الاستلام</p>
         </div>
 
@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div className="footer-column">
           <h3>اتصل بنا</h3>
-          <p>contact.imarketma@gmail.com</p>
+          <p>contact.spanastorema@gmail.com</p>
 {/*           <p> +212</p>
  */}          <div className="social-icons">
             <a href="https://facebook.com"><i className="fab fa-facebook"></i></a>
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2024 iMarket - جميع الحقوق محفوظة</p>
+        <p>© 2025 Spana Store - جميع الحقوق محفوظة</p>
       </div>
     </footer>
   );

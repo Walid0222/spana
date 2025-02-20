@@ -88,6 +88,8 @@
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  z-index: 100002; /* Z-index plus élevé pour éviter le recouvrement */
+
 }
 
 .popup-close-btn i {

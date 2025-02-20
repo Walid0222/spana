@@ -3,7 +3,7 @@
     background-color: #f8f9fa;
     padding: 40px 20px;
     text-align: center;
-    color: #333;
+    color: #000000;
   }
   
   .footer-container {
@@ -23,7 +23,7 @@
   .footer-column h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #4765c3;
+    color: #75777a;
   }
   
   .footer-column p, .footer-column ul, .footer-column li {
@@ -38,7 +38,7 @@
   
   .footer-column ul li a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     transition: color 0.3s ease;
   }
   

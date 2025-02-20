@@ -36,7 +36,7 @@
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 350px; /* Largeur uniforme pour les cartes */
+  width: 100%; /* Largeur uniforme pour les cartes */
   padding: 10px;
   height: auto; /* Hauteur fixe pour toutes les cartes */
   display: flex;

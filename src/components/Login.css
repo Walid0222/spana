@@ -35,13 +35,13 @@
 }
 
 .login-page input:focus {
-    border-color: #4765c3;
+    border-color: #000000;
 }
 
 .login-page button {
     padding: 12px;
     font-size: 16px;
-    background-color: #4765c3;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 5px;

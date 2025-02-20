@@ -1,21 +1,30 @@
 [
     {
         "name": "علي",
-        "comment": "المنتج مطابق للوصف، أنا راضٍ جداً.",
-        "rating": 5,
-        "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/LyUat7SB2OimRGfvh8Ss2DYcJX0AJJnUR1peyk75.jpeg"
+        "country": "Saudi Arabia",
+        "language": "العربية",
+        "comment": "المنتج رائع والجودة ممتازة، أنصح الجميع به!",
+        "rating": 5
     },
-    
     {
         "name": "يوسف",
-        "comment": "علاقة جودة/سعر مذهلة، شحن سريع",
-        "rating": 5,
-        "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/Uh23v59HXlHN0S2Q0BBFKxNDSI81vcqi8Ls5hZB2.jpeg"
+        "country": "المغرب",
+        "language": "الدارجة",
+        "comment": "J'ai aimé",
+        "rating": 5
     },
     {
         "name": "فاطمة",
-        "comment": "جودة ممتازة مقابل السعر، أنصح به!",
-        "rating": 4,
-        "image": "https://cdn.youcan.shop/stores/449c9e21ef88cecd488244a975aa20f7/others/LyUat7SB2OimRGfvh8Ss2DYcJX0AJJnUR1peyk75.jpeg"
+        "country": "Saudi Arabia",
+        "language": "العربية",
+        "comment": "أحسن منتج شريتو، كيما فالوصف، خدمة زوينة!",
+        "rating": 4
+    },
+    {
+        "name": "حسن",
+        "country": "المغرب",
+        "language": "الدارجة",
+        "comment": "منتوج كيعجب، السعر مناسب والجودة زوينة!",
+        "rating": 5
     }
 ]
