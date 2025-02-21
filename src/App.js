@@ -69,7 +69,8 @@ function AppContent() {
           }
         />
         <Route path="/" element={<ProductList />} />
-        <Route path="/product/:productId" element={<ProductPage />} />
+{/*         <Route path="/product/:productId" element={<ProductPage />} />
+ */}        <Route path="/product/:productId" element={<ProductList />} />
       </Routes>
       <Footer />
       {!location.pathname.startsWith('/orderspage' && !location.pathname.startsWith('/login')) && (
