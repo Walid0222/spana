@@ -43,13 +43,14 @@ function AppContent() {
       (function () {
         var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
         s1.async = true;
-        s1.src = 'https://embed.tawk.to/66fc'; // Votre code d'intégration
+        s1.src = 'https://embed.tawk.to/67b87235045d091905c8c2b9/1ikk7s8ur'; // Votre code d'intégration
         s1.charset = 'UTF-8';
         s1.setAttribute('crossorigin', '*');
         s0.parentNode.insertBefore(s1, s0);
       })();
     }
   }, [location.pathname]); // Exécutez l'effet chaque fois que la route change
+
 
   return (
     <div className="App">
