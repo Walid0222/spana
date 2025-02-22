@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div className="footer-column">
           <h3>اتصل بنا</h3>
-          <p>contact.spanastorema@gmail.com</p>
+          <p>contact.spanastore@gmail.com</p>
 {/*           <p> +212</p>
  */}          <div className="social-icons">
             <a href="https://facebook.com"><i className="fab fa-facebook"></i></a>
