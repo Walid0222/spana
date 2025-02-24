@@ -12,10 +12,10 @@ const Header = () => {
     return (
         <>
             <div className="header-top">
-            <p style={{ fontSize: '15px' }}>
-    التوصيل <span style={{ fontWeight: 'bold' }}>مجاني</span> & <span style={{ fontWeight: 'bold' }}>ضمان يصلك مع أي منتج </span>
-</p>
-           </div>
+                <p style={{ fontSize: '15px'}}>
+                    التوصيل <span style={{ fontWeight: 'bold' }}>مجاني</span> & <span style={{ fontWeight: 'bold' }}>ضمان يصلك مع أي منتج </span>
+                </p>
+            </div>
 
             <header className="header-main">
                 <div className="cart-login">

@@ -88,8 +88,8 @@ function AppContent() {
         <div className="popup">
           <div className="popup-content">
           <p>
-    نحن متجر إسباني يقع في <strong>مدريد، إسبانيا</strong>.
-    <br />
+{/*     نحن متجر إسباني يقع في <strong>مدريد، إسبانيا</strong>.
+ */}    <br />
     نقدم خدمات الشحن إلى المغرب والسعودية مع توصيل في غضون 
     <strong>24 إلى 48 ساعة</strong> كحد أقصى.
     <br />
@@ -119,7 +119,7 @@ function AppContent() {
       )}
 
           {/* Deuxième pop-up */}
-          {showPopup && (
+          {/* {showPopup && (
             <div className="popup">
               <div className="popup-content">
                 <p>
@@ -143,7 +143,7 @@ function AppContent() {
                 </div>
               </div>
             </div>
-          )}
+          )} */}
 
         </div>
       );
